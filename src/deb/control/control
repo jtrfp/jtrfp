@@ -1,0 +1,9 @@
+Package: jtrfp
+Version: 0.0.2
+Section: devel
+Priority: optional
+Architecture: all
+Depends: jdk (>= 1.5)
+Maintainer: Stefan Teitge <stefan.teitge@gmail.com>
+Description: Java tools and file parsers for Terminal Reality games
+Distribution: development
