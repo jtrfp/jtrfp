@@ -17,6 +17,12 @@
 			<email>stefan.teitge@gmail.com</email>
 			<url>http://www.stefanteitge.de</url>
 		</developer>
+		<developer>
+			<id>cjritola</id>
+			<name>Chuck Ritola</name>
+			<email>cjritola@gmail.com</email>
+			<url>https://www.ritolaaudio.com</url>
+		</developer>
 	</developers>
 		
 	<licenses>
