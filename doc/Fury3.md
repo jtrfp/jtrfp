@@ -12,8 +12,8 @@ Under *Windows 7* you additionally need to enable compatibility mode for Windows
 
 ## Reference
 
-Fury3 uses the [Pod1FormatReference POD1 file format] to store its data.
+Fury3 uses the [POD1 file format](Pod1FormatReference.md) to store its data.
 
 ## More info
 
- * [http://en.wikipedia.org/wiki/Fury3 Wikipedia]
+ * [Wikipedia](http://en.wikipedia.org/wiki/Fury3)

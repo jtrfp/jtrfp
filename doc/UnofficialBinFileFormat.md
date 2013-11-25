@@ -4,9 +4,9 @@
 
 *Author*: Oliver Pieper
 
-*Email*: [mailto:pieper@viaregio.de pieper@viaregio.de]
+*Email*: [pieper@viaregio.de](mailto:pieper@viaregio.de)
 
-*WWW*: [http://www.oliverpieper.de www.oliverpieper.de]
+*WWW*: [www.oliverpieper.de](http://www.oliverpieper.de)
 
 *Revision history*:
  
@@ -42,9 +42,11 @@ The term #variable_name in this file should be read as "the value stored in the 
 ### 3.1 ID number
 
 The BIN file starts with a four byte ID number.
-{{{
+
+```c
 int bin_id;
-}}}
+```
+
 The value bin_id is 0x14 for MTM BIN files and 0x20 for "animation control" files. Animation control files also use the extension .BIN, but are a totally different file type. They are covered at the end of this text.
 
 I'm not sure which values are used by Hellbender and Cart Precision Racing BINs. My program BINedit will issue a warning if a BIN file does not start with 0x14, but will attempt to load it anyway.

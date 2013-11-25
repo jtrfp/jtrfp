@@ -35,4 +35,4 @@ It furthermore uses following file formats within the POD files:
 ## More info
 
  * [Official game website](http://www.3drealms.com/tv/index.html)
- * [Wikipedia](http://en.wikipedia.org/wiki/Terminal_Velocity_(video_game))
+ * [http://en.wikipedia.org/wiki/Terminal_Velocity_(video_game)]
