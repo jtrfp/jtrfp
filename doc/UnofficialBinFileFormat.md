@@ -119,7 +119,7 @@ struct vertex_normal {
 
 The three values are the x-, y-, and z-component of the normal vector of the vertex. MTM2 needs this value for the Gouraud Shading of the "shiny" truck textures.
 
-=== 3.5.2 Block 0x16 (Line Segment Block)
+#### 3.5.2 Block 0x16 (Line Segment Block)
 
 **The block_id 0x16 precedes a Line Segment Block. The block consists of 3 components plus header:**
 
@@ -136,7 +136,7 @@ The three values are the x-, y-, and z-component of the normal vector of the ver
 
 **The vertices used in this block are subject to the same bin_scale that applies to face blocks.**
 
-![Screenshot](http://terminal-recall.googlecode.com/svn/trcl-lineseg-12-2012.png)
+![Screenshot](images/trcl-lineseg-12-2012.png)
 
 #### 3.5.3 Block 0x17 (Hellbender, unknown)
 
@@ -180,9 +180,9 @@ The anim_texture_header structure is followed by #at_num_textures filenames, all
 char at_tex_name[32];
 ```
 
-### 3.7 Color blocks (0x0A) ==
+### 3.7 Color blocks (0x0A)
 
-#### 3.7.1 Block 0x0A ===
+#### 3.7.1 Block 0x0A
 
 (Thanks to GuitarBill for the info on 0x0A and 0x19!)
 
@@ -201,9 +201,9 @@ All the 0x0A blocks encountered so far seem to be all zero. BINedit simply ignor
 
 This is just an educated guess, but if I had to store a RGB color value in the color_block structure, I would store the integer value 0x00RRGGBB where RR, GG, and BB are the hex values of the red, green, and blue component respectively. In other words: cb_byte1 holds the blue component, cb_byte2 the green, cb_byte3 the red, and cb_byte4 is zero.
 
-### 3.8 Face Blocks (0x0E, 0x11, 0x18, 0x19, 0x29, 0x33, 0x34) ==
+### 3.8 Face Blocks (0x0E, 0x11, 0x18, 0x19, 0x29, 0x33, 0x34)
 
-#### 3.8.1 Block 0x0E, 0x11, 0x18, 0x29, 0x33, 0x34 ===
+#### 3.8.1 Block 0x0E, 0x11, 0x18, 0x29, 0x33, 0x34
 
 Those Face Blocks (except for 0x19) all use an identical structure and thus can be handled in the same way. It is important to store the block_id (the block_ids of Face Blocks are also called "Face Types" by BINedit)  itself, too, because it affects the way the face is displayed in MTM, Hellbender, CPR or Fly!:
 

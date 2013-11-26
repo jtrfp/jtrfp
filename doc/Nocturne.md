@@ -1,6 +1,6 @@
 # Nocturne Overview
 
-*Nocturne* was released in 1999. It was developed by [TerminalReality Terminal Reality] and published by Gathering of Developers. It is a survival horror game. Its engine was later used in [Blair Witch Volume 1: Rustin Parr](BlairWitch1.md).
+*Nocturne* was released in 1999. It was developed by [Terminal Reality](TerminalReality.md) and published by Gathering of Developers. It is a survival horror game. Its engine was later used in [Blair Witch Volume 1: Rustin Parr](BlairWitch1.md).
 
 ## Reference
 

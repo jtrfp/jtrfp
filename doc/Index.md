@@ -6,4 +6,4 @@ Oliver Pieper initially described the for for older game in his article [Unoffic
 
 The also is a list of other [file formats](FileFormats.md) and its individual description.
 
-All supported games are listed in the [Terminal Velocity article](TerminalVelocity.md)
+All supported games are listed in the [Terminal Velocity article](TerminalVelocity.md).
