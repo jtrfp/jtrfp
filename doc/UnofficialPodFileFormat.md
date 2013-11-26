@@ -60,11 +60,11 @@ struct pod_directory {
 };
 ```
 
-File_palette_name usually is a zero terminated string with the name of a file. In MTM1, however, there can be a special case: If the file is a .RAW file (.RAW files are the MTM texture files), it is followed by a zero byte, followed again by the name of the .ACT palette file that belongs to the .RAW file. According to Guitar Bill, it is not necessary to either read or write the .ACT name from/to PODs. MTM1 seems to default to METALCR2.ACT in both cases.
+`File_palette_name` usually is a zero terminated string with the name of a file. In MTM1, however, there can be a special case: If the file is a .RAW file (.RAW files are the MTM texture files), it is followed by a zero byte, followed again by the name of the .ACT palette file that belongs to the .RAW file. According to Guitar Bill, it is not necessary to either read or write the .ACT name from/to PODs. MTM1 seems to default to METALCR2.ACT in both cases.
 
-File_lnth is the length (i.e. the number of bytes) of the stored file. This is always the case, and there's no exception for .RAW files, as I thought before. Thanks, Guitar Bill!
+`File_lnth` is the length (i.e. the number of bytes) of the stored file. This is always the case, and there's no exception for .RAW files, as I thought before. Thanks, Guitar Bill!
 
-File_offset is the starting position within the POD archive where the actual data of the stored file is located. In other words: if file_offset is 0x12345, the the file data starts 0x12345 bytes from the beginning of the POD archive. See the previous paragraph on obtaining the length of the stored file.
+`File_offset` is the starting position within the POD archive where the actual data of the stored file is located. In other words: if file_offset is 0x12345, the the file data starts 0x12345 bytes from the beginning of the POD archive. See the previous paragraph on obtaining the length of the stored file.
 
 ### 3.4 File data
 

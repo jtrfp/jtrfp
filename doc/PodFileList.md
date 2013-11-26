@@ -1,6 +1,6 @@
 # Lists POD files used in Terminal Reality Games
 
-= Monster Truck Madness 2 =
+## Monster Truck Madness 2
 
  * _cockpit.pod_: truck cockpits
  * _music.pod_: game music
@@ -9,7 +9,7 @@
  * _truck.pod_: trucks
  * _ui.pod_: game UI
 
-== Tracks ==
+### Tracks
 
  * _alaska.pod_: The Heights
  * _aztec.pod_: The Excavation
@@ -24,7 +24,7 @@
 
 _Torture Pit_ is a hidden track. See [HowToEnableTorturePit How to enable Torture Pit?]
 
-=== Multiplayer Arenas ===
+### Multiplayer Arenas
 
  * _summit1.pod_: Arena Rumble
  * _summit2.pod_: Pyramid Rumble

@@ -11,4 +11,4 @@ Ghostbusters  uses the [POD5 file format](Pod5FormatReference.md) to store its d
 
 # More info
 
- * [http://en.wikipedia.org/wiki/Ghostbusters_(2008_video_game) Wikipedia]
+ * [http://en.wikipedia.org/wiki/Ghostbusters_(2008_video_game)]

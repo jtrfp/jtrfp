@@ -1,6 +1,6 @@
 # General reference for the POD file format
 
-*All information here is to my best knowledge, is is not proven by any official reference manual by [Terminal Reality](TerminalReality.md).
+*All information here is to my best knowledge, is is not proven by any official reference manual by [Terminal Reality](TerminalReality.md).*
 
 POD files are simple container files housing other files like textures or models. File extension is _pod_.
 

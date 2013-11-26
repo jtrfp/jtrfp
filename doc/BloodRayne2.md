@@ -31,4 +31,4 @@ It furthermore uses following file formats within the POD files:
 
 # More info
 
- * [http://en.wikipedia.org/wiki/BloodRayne_2 Wikipedia]
+ * [Wikipedia](http://en.wikipedia.org/wiki/BloodRayne_2)

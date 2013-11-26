@@ -1,6 +1,6 @@
 # Reference for the MTM TRK file format
 
-*All information here is to my best knowledge, is is not proven by any official reference manual by Microsoft or [Terminal Reality](TerminalReality.md).
+*All information here is to my best knowledge, is is not proven by any official reference manual by Microsoft or [Terminal Reality](TerminalReality.md).*
 
 TRK files contain a information for a truck. Please not that [Monster Truck Madness 1](MTM1.md) uses a slightly different format than described here.
 

@@ -3,7 +3,7 @@
 
 *Hellbender* was released in 1996 as a sequel to [Fury 3](Fury3.md). It was developed by [Terminal Reality](TerminalReality.md) and published by Microsoft. It is a science fiction flight simulator.
 
-## Howtos =
+## Howtos
 
 ### How to install under modern Windows Versions?
 
@@ -11,8 +11,8 @@ Simply copy all files from the CD to your hard drive and run _hellbend.exe_. You
 
 ## Reference
 
-Hellbender uses the [Pod1FormatReference POD1 file format] to store its data.
+Hellbender uses the [POD1 file format](Pod1FormatReference.md) to store its data.
 
 ## More info
 
- * [http://en.wikipedia.org/wiki/Hellbender_(computer_game) Wikipedia]
+ * [http://en.wikipedia.org/wiki/Hellbender_(computer_game)]

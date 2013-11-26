@@ -1,7 +1,7 @@
 # Reference for the MTM ACT file format
 
 
-*All information here is to my best knowledge, is is not proven by any official reference manual by Microsoft or [Terminal Reality](TerminalReality.md).
+*All information here is to my best knowledge, is is not proven by any official reference manual by Microsoft or [Terminal Reality](TerminalReality.md).*
 
 ACT files are files containing an indexed list of colors. The are used to color [RAW files](RawFormatReference.md), which only contain color indexes instead of real colors. ACT stands for _Adobe Color Table_.
 
@@ -17,20 +17,20 @@ Example: The MTM2 crazy98.pod contains the file `ART\BACKHOE.ACT`. The color at 
 
 The ACT file structure is as follows:
 
-{{{
+```c
 color[0]
 ...
 color[numColors - 1]
-}}}
+```
 
 With decomposition:
 
-{{{
+```c
 color[i] = component[i][0], component[i][1], component[i][2]
-}}}
+```
 
 With variables:
 
-{{{
+```c
 component[i][j]: color component in range [0...255]
-}}}
+```

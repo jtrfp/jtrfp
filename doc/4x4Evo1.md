@@ -4,8 +4,8 @@
 
 ## Reference
 
-4x4 Evo uses the [Pod2FormatReference POD2 file format] to store its data.
+4x4 Evo uses the [POD2 file format](Pod2FormatReference.md) to store its data.
 
 ## More info
 
- * [http://en.wikipedia.org/wiki/4x4_Evolution Wikipedia]
+ * [Wikipedia](http://en.wikipedia.org/wiki/4x4_Evolution)

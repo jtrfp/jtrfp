@@ -4,8 +4,8 @@
 
 ## Reference
 
-CART Precision Racing uses the [Pod1FormatReference POD1 file format] to store its data.
+CART Precision Racing uses the [POD1 file format](Pod1FormatReference.md) to store its data.
 
 ## More info
 
- * [http://www.microsoft.com/games/precisionracing/cart/ Official game website]
+ * [Official game website](http://www.microsoft.com/games/precisionracing/cart/)

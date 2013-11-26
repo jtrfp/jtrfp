@@ -4,9 +4,9 @@
 
 Shows how to store all BIN files from a specified POD file to disk.
 
-See: https://github.com/jtrfp/jtrfp/blob/master/src/snippets/java/jtrfp/Snippet01.java
+See: [https://github.com/jtrfp/jtrfp/blob/master/src/snippets/java/jtrfp/Snippet01.java]
 
-{{{
+```c
 String podFilePath = ...; // path to POD file
 String outDir = ...; // path to output directory
 
@@ -21,4 +21,4 @@ for (IBinPodFileEntry entry : entries) {
 	binFile.getParentFile().mkdir(); // ensure directory exists
 	entry.toFile(binFile);
 }
-}}}
+´´´

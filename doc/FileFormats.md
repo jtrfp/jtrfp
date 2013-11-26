@@ -2,7 +2,8 @@
 
 ## Usage per game
 
-| *Format* | [TV](TerminalVelocity.md) | [F3](Fury3.md) | [HB](Hellbender.md) | [MTM](MTM1.md) | [CPR](CartPrecisionRacing.md) | [MTM2](MTM2.md) |
+| Format | [TV](TerminalVelocity.md) | [F3](Fury3.md) | [HB](Hellbender.md) | [MTM](MTM1.md) | [CPR](CartPrecisionRacing.md) | [MTM2](MTM2.md) |
+|-----|---|---|---|---|---|---|
 | AAI | - | - | - | - | X | X |
 | [ACT](ActFormatReference.md) | X | X | X | X | X | X |
 | ANI | X | X | X | X | X | X |
@@ -61,16 +62,6 @@
 
 [MTM2](MTM2.md): POWERBIG.200, POWERBIG.400 and POWERBIG.480
 
-= POD Usage =
+## POD Usage
 
-| *Game*              | *POD Format* | *Textures* |
-| [Terminal Velocity](TerminalVelocity.md)| [POD1](Pod1FormatReference.md)  | RAW & some palettes |
-| [Fury 3](Fury3.md)             | POD1 | RAW & some palettes |
-| [Hellbender](Hellbender.md)        				| POD1 | RAW & some palettes |
-| [MTM1](MTM1.md)              | POD1 | RAW & some palettes |
-| [CART Precision Racing](CartPrecisionRacing.md) | POD1 | RAW & palette for each |
-| [MTM2](MTM2.md)              | POD1 | RAW & palette for each |
-| [4x4 Evo](4x4Evo1.md)   | [POD2](Pod2FormatReference.md) | ? |
-| [4x4 Evo 2](4x4Evo2.md) | POD2 | ? |
-| [Fly!](Fly1.md)          | [EPD](EpdFormatReference.md)    | ? |
-| [Fly! II](Fly2.md)       | [POD3](Pod3FormatReference.md)  | ? |
+The used POD file format versions can be found in the [Terminal Reality article](TerminalReality.md).

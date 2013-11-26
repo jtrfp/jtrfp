@@ -1,4 +1,4 @@
-# Describes how worlds are structured in MTM.
+# World structured in MTM
 
 In MTM tracks are stored in [POD files](PodFormatReference.md). Each of those POD file usually has internal sub folders like _art_, _data_, _fog_, _levels_, _models_ and _world_. See the [POD file list](PodFileList.md) for more information.
 

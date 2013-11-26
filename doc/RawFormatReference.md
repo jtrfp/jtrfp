@@ -1,6 +1,6 @@
 # Reference for the MTM RAW file format
 
-*All information here is to my best knowledge, is is not proven by any official reference manual by Microsoft or [Terminal Reality](TerminalReality.md).
+*All information here is to my best knowledge, is is not proven by any official reference manual by Microsoft or [Terminal Reality](TerminalReality.md).*
 
 RAW files simply contain a (square) matrix of values or indexes.
 

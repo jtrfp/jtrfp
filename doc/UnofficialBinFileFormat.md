@@ -10,8 +10,7 @@
 
 *Revision history*:
  
- * <font color="red">In red: Any additions after 1999-11-27 by Stefan Teitge</font>
- * <font color=#B18904>In yellow: Any additions after 1999-11-27 by Chuck Ritola</font>
+ * **In bold**: Any additions after 1999-11-27 by Stefan Teitge and Chuck Ritola
  * 1999-11-27 v1.1 - Added Fly! to the list of games using BIN models; changed Texture Block struct in 3.6.1 (now 16-byte string instead of 12-byte string + 4-byte unknown value); added the Face Type 0x34 in 3.8.1 (thanks to Guitar Bill for the infos!). Revised my "educated" guess in 3.7.1. Some other minor corrections.
  * 1999-11-21 v1.0 - Put all the info from my old and unstructured "BIN File Format.txt" and "animated bin.txt" and the ReadBIN()-Function of BINedit together.
 
@@ -35,7 +34,7 @@ This document contains all the info on BIN files that is used by my BIN file edi
 
 The term #variable_name in this file should be read as "the value stored in the variable called variable_name".
 
-<font color="red">256 model units are equivalent to 1 foot in reality.</font>
+**256 model units are equivalent to 1 foot in reality.**
 
 ## 3. File format
 
@@ -52,93 +51,92 @@ The value bin_id is 0x14 for MTM BIN files and 0x20 for "animation control" file
 I'm not sure which values are used by Hellbender and Cart Precision Racing BINs. My program BINedit will issue a warning if a BIN file does not start with 0x14, but will attempt to load it anyway.
 
 Examples:
-{{{
+```c
 14 00 00 00 - regular MTM BIN file
 20 00 00 00 - regular animation control BIN file
-}}}
+```
 
-### 3.2 BIN header ==
+### 3.2 BIN header
 Following the ID number are 16 bytes (four 4 byte values) of a header structure.
-{{{
+```c
 struct binheader {
 	int bin_scale;
 	int bin_unknown1;	// usually 0x2
 	int bin_unknown2;	// usually 0x0
 	int bin_vert_num;
 };
-}}}
+```
 
 Bin_scale is 00 00 01 00 (0x10000) for all MTM BINs. There are different values in Hellbender BINs. They seem to affect the size of the model.
 
 The function of bin_unknown1 and bin_unknown2 is, well... unknown. The usual values for MTM are bin_unknown1=2 (02 00 00 00), bin_unknown2=0 (00 00 00 00). The last value bin_vert_num is the number of vertices of the model.
 
 Example:
-{{{
+```c
 00 00 01 00 - "normal" MTM scale
 02 00 00 00 - unknown
 00 00 00 00 - unknown
 00 01 00 00 - 0x100 (=256) vertices
-}}}
+```
 
 ### 3.3 Vertex coordinates
 
 Now that we know the number of vertices bin_vert_num, we can read the next portion of the BIN file, which consists of three times four bytes for each vertex.
-{{{
+```c
 struct vertex {
 	int x;
 	int y;
 	int z;
 };
-}}}
+```
 The three integer values are the x-, y-, and z-coordinate of the vertex. Negative values are possible.
 
 ### 3.4 Data blocks
 
 The first part of all BINs (ID, header, vertex coordinates) is present in all MTM bin files. What follows is a variable sequence of "Data Blocks" where the first four-byte value of each block determines what kind of data comes after it.
 
-{{{
+```c
 int block_id;
-}}}
+```
 
 If you encounter a new kind of block_id in a BIN file, your only option is to break out your hex editor and try to figure out how long it is (i.e. where the next block starts) and what it does. In many cases, you'll probably simply ignore the block until you've got an idea of what it might do.
 
-### 3.5 Misc Blocks (0x03, <font color=#B18904> 0x16</font>, 0x17)
+### 3.5 Misc Blocks (0x03, **0x16**, 0x17)
 
 #### 3.5.1 Block 0x03 (MTM2 Vertex Normals)
 
-<font color="red">The block starts with two integers of unknown use. Then it is followed by the normals as described below.
-</font>
+**The block starts with two integers of unknown use. Then it is followed by the normals as described below.**
 
 Block_id 0x03 has so far only been encountered in MTM2 BINs. It is similar to the vertex coordinates at the beginning of the BIN file, and as far as I can recall, it always follows immediately after it. The block consists of three four-byte values for each vertex.
 
-{{{
+```c
 struct vertex_normal {
 	int nx;
 	int ny;
 	int nz;
 };
-}}}
+```
 
 The three values are the x-, y-, and z-component of the normal vector of the vertex. MTM2 needs this value for the Gouraud Shading of the "shiny" truck textures.
 
-<font color=#B18904>
 === 3.5.2 Block 0x16 (Line Segment Block)
 
-The block_id 0x16 precedes a Line Segment Block. The block consists of 3 components plus header:
+**The block_id 0x16 precedes a Line Segment Block. The block consists of 3 components plus header:**
 
  * uint32 Block 0x16 header
  * uint32 colorIndex
  * uint32 vertexID1
  * uint32 vertexID2
 
-... where colorIndex, when a value of 16 is added, likely points to the color index of the current planet's palette for which to draw this segment.
-....where vertexID is an index referring to the BIN file header's common vertex list.
-This is used in the domm.bin files referred by WATER.LVL of the Fury3 POD.
+**... where colorIndex, when a value of 16 is added, likely points to the color index of the current planet's palette for which to draw this segment.**
 
-The vertices used in this block are subject to the same bin_scale that applies to face blocks.
+**....where vertexID is an index referring to the BIN file header's common vertex list.**
 
-http://terminal-recall.googlecode.com/svn/trcl-lineseg-12-2012.png
-</font>
+**This is used in the domm.bin files referred by WATER.LVL of the Fury3 POD.**
+
+**The vertices used in this block are subject to the same bin_scale that applies to face blocks.**
+
+![Screenshot](http://terminal-recall.googlecode.com/svn/trcl-lineseg-12-2012.png)
 
 #### 3.5.3 Block 0x17 (Hellbender, unknown)
 
@@ -150,12 +148,12 @@ This block_id is followed by 8 bytes (probably two four-byte values) of unknown 
 
 The block_id 0x0D precedes a Texture Block. The block contains the name of the texture that is to be used for all the following faces (until another Texture Block 0x0D or 0x1D is found).
 
-{{{
+```c
 struct texture_block {
 	int tb_unknown1;
 	char tb_tex_name[16];
 };
-}}}
+```
 
 The first four bytes (tb_unknown1) after the block_id are always zero. Next comes a 16-byte string containing the texture name.
 
@@ -163,7 +161,7 @@ The first four bytes (tb_unknown1) after the block_id are always zero. Next come
 
 A block with the ID 0x1D describes a Texture Animation that is to be used for all the following faces (until the next block 0x0D or 0x1D is read).
 
-{{{
+```c
 struct anim_texture_header {
 	int at_unknown1;
 	int at_num_textures;
@@ -172,15 +170,15 @@ struct anim_texture_header {
 	int at_unknown3;
 	int at_unknown4;
 };
-}}}
+```
 
 A Texture Animation is actually a slide show of textures. At_num_textures is the number of "frames" in the animation, while at_delay determines the frame rate. At_delay is calculated as 65535/frames_per_second.
 
 The anim_texture_header structure is followed by #at_num_textures filenames, all 32 byte long:
 
-{{{
+```c
 char at_tex_name[32];
-}}}
+```
 
 ### 3.7 Color blocks (0x0A) ==
 
@@ -190,14 +188,14 @@ char at_tex_name[32];
 
 The block_id 0x0A is followed by only one four-byte value. Those blocks precede special Face Blocks of type 0x19, and Bill suspects that the value defines a color for uniformly colored faces.
 
-{{{
+```c
 struct color_block {
 	BYTE	cb_byte1;
 	BYTE	cb_byte2;
 	BYTE	cb_byte3;
 	BYTE	cb_byte4;
 };
-}}}
+```
 
 All the 0x0A blocks encountered so far seem to be all zero. BINedit simply ignores the 0x0A block and continues using the last texture, which works quite well, but is probably not the right way to handle it...
 
@@ -218,7 +216,7 @@ Those Face Blocks (except for 0x19) all use an identical structure and thus can 
 
 The block_id is followed by a header structure with general information on the face:
 
-{{{
+```c
 struct face_block_header {
 	int fb_num_vertices;
 	inf fb_normal_x;
@@ -226,7 +224,7 @@ struct face_block_header {
 	inf fb_normal_z;
 	int fb_magic;
 };
-}}}
+```
 
 Fb_num_vertices is a four-byte integer value with the number of vertices of the face. Only the values 0x3 and 0x4 for three- and four-sided faces have been encountered so far.
 
@@ -238,25 +236,25 @@ One noteable exception for fb_magic: if the BIN is used as backdrop model, the v
 
 For each of the #fb_num_vertices vertices follows a vertex block:
 
-{{{
+```c
 struct vertex_block {
 	int vb_vertex_index;
 	int vb_tex_coord_u;
 	int vb_tex_coord_v;
 };
-}}}
+```
 
 Vb_vertex_index is an index into the Vertex Coordinates at the beginning of the BIN file, starting with index 0 for the first vertex coordinate triplet, and so on.
 
 The two vb_tex_coord values map the vertices of the face to the texture. They are both in the range of 0x0 to 0xFF00, with u=0x0, v=0x0 being the upper left corner of the texture, and u=0xFF00, v=0xFF00 being the lower right corner.
 
-#### 3.8.2 Block 0x19<font color="red>, 0x05</font>
+#### 3.8.2 Block 0x19, **0x05**
 
 (Thanks to GuitarBill for the info on 0x0A and 0x19!)
 
-Block 0x19<font color="red> and 0x05</font> is a special Face Type that follows after Color Blocks of type 0x0A. The header format is identical to that of the other Face Types, i.e.
+Block 0x19 **and 0x05** is a special Face Type that follows after Color Blocks of type 0x0A. The header format is identical to that of the other Face Types, i.e.
 
-{{{
+```c
 struct face_block_header_0x19 {
 	int fb19_num_vertices;
 	inf fb19_normal_x;
@@ -264,51 +262,50 @@ struct face_block_header_0x19 {
 	inf fb19_normal_z;
 	int fb19_magic;
 };
-}}}
+```
 
 (see "Block 0x0E, 0x11, 0x18, 0x29, 0x33" for explanation), but the Texture Coordinates are missing from the vertex info blocks:
 
-{{{
+```c
 int vb19_vertex_index;
-}}}
+```
 
-<font color="red">
-### 3.9 Rotor Block 0x02 ==
+### 3.9 Rotor Block 0x02
 
-![images/helicopter.png]
+![Helicopter](images/helicopter.png)
 
-*HIGHLY SPECULATIVE*: As this block occurs twice and an only in MTM2's _heli.bin_ describing the rescue helicopter. I suppose the follwing: Each block describes one of the rotors.
+**HIGHLY SPECULATIVE: As this block occurs twice and an only in MTM2's _heli.bin_ describing the rescue helicopter. I suppose the follwing: Each block describes one of the rotors.**
 
-This blocks' size is 136 byte. It can be found twice im MTM2's _heli.bin_. The supposed structure is as follows.
+**This blocks' size is 136 byte. It can be found twice im MTM2's _heli.bin_. The supposed structure is as follows.**
 
- * 4 bytes always zero
- * an int describing a number of vertexes (numVertexes)
- * numVertexes vertexes (12 byte per vertex as described in 3.8.1)
- * 80 bytes of unknown purpose
+ * **4 bytes always zero**
+ * **an int describing a number of vertexes (numVertexes)**
+ * **numVertexes vertexes (12 byte per vertex as described in 3.8.1)**
+ * **80 bytes of unknown purpose**
 
-### 3.10 Block 0x12 ==
+### 3.10 Block 0x12
 
-The length of this block is 4 byte. Found in MTM1 _heli.bin_<font color=#B18904> and TV _models\helicopt.bin_</font>
+**The length of this block is 4 byte. Found in MTM1 _heli.bin_and TV _models\helicopt.bin_**
 
-### 3.11 Block 0x0C ==
+### 3.11 Block 0x0C
 
-The length of this block is 24 byte. Found in MTM1 _heli.bin_ <font color=#B18904> and TV _models\helicopt.bin_</font></font>
+**The length of this block is 24 byte. Found in MTM1 _heli.bin_ and TV _models\helicopt.bin_**
 
-### 3.12 Block 0x00 ==
+### 3.12 Block 0x00
 
 A block_id of 0x00000000 marks the end of a BIN file.
 
-= 4. Animation Control BIN files =
+## 4. Animation Control BIN files
 
 Animation control BINs define a BIN animation, i.e. a BIN with an animated shape. It does not contain any model data itself, but contains the names of the BIN files used for the animation. Those files must be identical in every aspect except for the position of the vertices (and data that depends on it, like the normal vectors). The animated BIN will smoothly "morph" from the shape of the first BIN to the next, and so on. In the end it will morph from the last shape into the first and the cycle starts again.
 
 Animation Control BIN files start with a four byte ID number
-{{{
+```c
 int bin_id;
-}}}
+```
 of 0x20, followed by a structure of fixed length:
 
-{{{
+```c
 struct anim_control {
 	int ac_unknown1;	// always zero
 	int ac_num_frames;
@@ -321,7 +318,7 @@ struct anim_control {
 	  <..and so on...>
 	char ac_binfile29[16];
 };
-}}}
+```
 
 Ah_num_frames is the number of different shapes that define the morphing of the shape. Ah_delay defines the speed of the animation and is calculated as 65536/frames_per_second. The first #ac_num_frames of the ax_binfile??-strings contain the names of the animation stages. Unused strings are all zero.
 

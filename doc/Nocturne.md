@@ -42,4 +42,4 @@ It furthermore uses following file formats within the POD files:
 
 ## More info
 
- * [http://en.wikipedia.org/wiki/Nocturne_(video_game) Wikipedia]
+ * [http://en.wikipedia.org/wiki/Nocturne_(video_game)]

@@ -36,4 +36,4 @@ It furthermore uses following file formats within the POD files:
 
 ## More info
 
- * [http://en.wikipedia.org/wiki/The_Blair_Witch_Project_(video_games) Wikipedia]
+ * [http://en.wikipedia.org/wiki/The_Blair_Witch_Project_(video_games)]
