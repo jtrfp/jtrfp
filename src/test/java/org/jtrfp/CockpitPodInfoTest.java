@@ -23,12 +23,13 @@ import java.io.File;
 import java.io.IOException;
 
 
-import org.jtrfp.common.FileLoadException;
-import org.jtrfp.common.FileStoreException;
-import org.jtrfp.common.internal.pod.Pod1Loader;
-import org.jtrfp.common.pod.IPodData;
-import org.jtrfp.common.pod.IPodFileEntry;
-import org.jtrfp.common.pod.PodFile;
+
+import org.jtrfp.jtrfp.FileLoadException;
+import org.jtrfp.jtrfp.FileStoreException;
+import org.jtrfp.jtrfp.internal.pod.Pod1Loader;
+import org.jtrfp.jtrfp.pod.IPodData;
+import org.jtrfp.jtrfp.pod.IPodFileEntry;
+import org.jtrfp.jtrfp.pod.PodFile;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;

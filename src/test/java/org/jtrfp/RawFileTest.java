@@ -19,9 +19,10 @@ package org.jtrfp;
 import java.io.File;
 
 
-import org.jtrfp.common.FileLoadException;
-import org.jtrfp.common.raw.IRawData;
-import org.jtrfp.common.raw.RawFile;
+
+import org.jtrfp.jtrfp.FileLoadException;
+import org.jtrfp.jtrfp.raw.IRawData;
+import org.jtrfp.jtrfp.raw.RawFile;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

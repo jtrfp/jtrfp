@@ -20,11 +20,13 @@ import java.io.File;
 import java.io.IOException;
 
 
-import org.jtrfp.common.FileLoadException;
-import org.jtrfp.common.FileStoreException;
-import org.jtrfp.common.pod.PodIniFile;
-import org.jtrfp.game.GameDirFactory;
-import org.jtrfp.game.ITriGameDir;
+
+
+import org.jtrfp.jtrfp.FileLoadException;
+import org.jtrfp.jtrfp.FileStoreException;
+import org.jtrfp.jtrfp.game.GameDirFactory;
+import org.jtrfp.jtrfp.game.ITriGameDir;
+import org.jtrfp.jtrfp.pod.PodIniFile;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;

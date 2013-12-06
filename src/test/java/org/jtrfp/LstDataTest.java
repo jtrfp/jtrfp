@@ -22,12 +22,13 @@ import java.io.File;
 import java.io.IOException;
 
 
-import org.jtrfp.common.FileLoadException;
-import org.jtrfp.common.FileStoreException;
-import org.jtrfp.common.lst.ILstData;
-import org.jtrfp.common.lst.LstData;
-import org.jtrfp.common.lst.LstFile;
-import org.jtrfp.common.pod.PodFile;
+
+import org.jtrfp.jtrfp.FileLoadException;
+import org.jtrfp.jtrfp.FileStoreException;
+import org.jtrfp.jtrfp.lst.ILstData;
+import org.jtrfp.jtrfp.lst.LstData;
+import org.jtrfp.jtrfp.lst.LstFile;
+import org.jtrfp.jtrfp.pod.PodFile;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;

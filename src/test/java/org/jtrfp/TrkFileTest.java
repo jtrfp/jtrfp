@@ -21,9 +21,10 @@ import static org.junit.Assert.assertTrue;
 import java.io.File;
 
 
-import org.jtrfp.common.FileLoadException;
-import org.jtrfp.common.trk.ITrkData;
-import org.jtrfp.common.trk.TrkFile;
+
+import org.jtrfp.jtrfp.FileLoadException;
+import org.jtrfp.jtrfp.trk.ITrkData;
+import org.jtrfp.jtrfp.trk.TrkFile;
 import org.junit.Before;
 import org.junit.Test;
 
