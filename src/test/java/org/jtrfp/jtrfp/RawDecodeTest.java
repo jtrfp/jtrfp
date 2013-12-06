@@ -14,48 +14,47 @@
  * You should have received a copy of the GNU General Public License
  * along with jtrfp.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.jtrfp;
+package org.jtrfp.jtrfp;
 
 import java.io.File;
-import java.io.IOException;
 
 
 
 
 import org.jtrfp.jtrfp.FileLoadException;
 import org.jtrfp.jtrfp.FileStoreException;
+import org.jtrfp.jtrfp.act.IActPodFileEntry;
 import org.jtrfp.jtrfp.game.GameDirFactory;
 import org.jtrfp.jtrfp.game.ITriGameDir;
-import org.jtrfp.jtrfp.kfm.IKfmPodFileEntry;
+import org.jtrfp.jtrfp.pod.IPodData;
 import org.jtrfp.jtrfp.pod.PodFile;
+import org.jtrfp.jtrfp.raw.IRawPodFileEntry;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class KfmFileTest {
+public class RawDecodeTest {
 
-	public void testSkeleton(String name, String path) throws FileLoadException {
-		ITriGameDir gameDir = GameDirFactory.create(new File(path));
-		Assert.assertNotNull("Invalid " + name + " dir", gameDir);
+	private void testSkeleton(ITriGameDir gameDir) throws FileLoadException, FileStoreException {
 		PodFile[] podFiles = gameDir.getPodFiles();
 
 		for (PodFile podFile : podFiles) {
-			IKfmPodFileEntry[] entries = podFile.getData().findEntries(IKfmPodFileEntry.class);
-			for (IKfmPodFileEntry entry : entries) {
-				try {
-					entry.getData();
-				} catch (FileLoadException e) {
-					// as KfmDataLoader loads from streams it does not know the file name
-					// so we print helping message here
-					String msg = "Failed '" + entry.getPath() + "' from '" + podFile.getFile().getName() + "'";
-					System.err.println(msg);
-					//throw e;
-				}
+			IPodData podData = podFile.getData();
+
+			IRawPodFileEntry[] rawEntries = podData.findEntries(IRawPodFileEntry.class);
+
+			for (IRawPodFileEntry rawEntry : rawEntries) {
+				IActPodFileEntry actEntry = gameDir.getActSearchStrategy().find(rawEntry);
+
+				String message = "No ACT entry found for " + rawEntry.getPath() + " in " + podFile.getFile().getName() + " in " + gameDir.getGameName();
+				Assert.assertNotNull(message, actEntry);
 			}
 		}
 	}
 
 	@Test
-	public void testGetDataBlair1() throws IOException, FileStoreException, FileLoadException {
-		testSkeleton("Blair Witch 1", ITestConfig.BLAIR1_DIR);
+	public void testMtm2() throws FileLoadException, FileStoreException {
+		ITriGameDir gameDir = GameDirFactory.create(new File(ITestConfig.MTM2_DIR));
+
+		testSkeleton(gameDir);
 	}
 }

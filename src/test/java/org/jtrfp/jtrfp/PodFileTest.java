@@ -1,4 +1,4 @@
-package org.jtrfp;
+package org.jtrfp.jtrfp;
 
 import java.io.File;
 import java.io.IOException;

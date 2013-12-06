@@ -14,36 +14,38 @@
  * You should have received a copy of the GNU General Public License
  * along with jtrfp.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.jtrfp;
+package org.jtrfp.jtrfp;
+
+import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 
 
 
 import org.jtrfp.jtrfp.FileLoadException;
-import org.jtrfp.jtrfp.raw.IRawData;
-import org.jtrfp.jtrfp.raw.RawFile;
-import org.junit.Assert;
+import org.jtrfp.jtrfp.trk.ITrkData;
+import org.jtrfp.jtrfp.trk.TrkFile;
 import org.junit.Before;
 import org.junit.Test;
 
-public class RawFileTest {
+public class TrkFileTest {
 
-	private RawFile rawFile;
+	private static final String TRUCK_PATH = "TRUCK\\DIGGER.TRK";
+
+	private TrkFile trkFile;
 
 	@Before
 	public void setUp() {
-		File file = new File(ITestConfig.EXTRACTED_MTM2_FILES_DIR, "ART/C8OFF31.RAW");
+		File file = new File(ITestConfig.EXTRACTED_MTM2_FILES_DIR, TRUCK_PATH);
 
-		Assert.assertTrue("Raw file does not exist.", file.exists());
-
-		rawFile = new RawFile(file);
+		assertTrue("Test truck does not exist", file.exists() && file.isFile());
+		trkFile = new TrkFile(file);
 	}
 
 	@Test
-	public void testGetRawdata() throws FileLoadException {
-		IRawData rawData = rawFile.getRawData();
-		Assert.assertEquals("Width should be 64.", 64, rawData.getWidth());
-		Assert.assertEquals("Height should be 64.", 64, rawData.getHeight());
+	public void testGetData() throws FileLoadException {
+		ITrkData trkData = trkFile.getData();
+
+		assertTrue("Truck name mismatch", "Grave Digger".equals(trkData.getTruckName()));
 	}
 }

@@ -14,21 +14,23 @@
  * You should have received a copy of the GNU General Public License
  * along with jtrfp.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.jtrfp;
+package org.jtrfp.jtrfp;
 
 import java.io.File;
 
 
 
 import org.jtrfp.jtrfp.FileLoadException;
+import org.jtrfp.jtrfp.act.IActPodFileEntry;
 import org.jtrfp.jtrfp.pod.IPodFileEntry;
 import org.jtrfp.jtrfp.pod.PodFile;
-import org.jtrfp.jtrfp.sit.ISitPodFileEntry;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class SitDataTest {
+public class ActDataTest {
+
+	private static final int COLOR_COUNT = 256;
 
 	private PodFile podFile;
 
@@ -43,10 +45,12 @@ public class SitDataTest {
 
 	@Test
 	public void testEntryGetData() throws FileLoadException {
-		IPodFileEntry entry = podFile.getData().findEntry("world\\crazy98.sit");
+		IPodFileEntry entry = podFile.getData().findEntry("art\\crazy98.act");
 
-		Assert.assertTrue("No SIT entry found.", entry instanceof ISitPodFileEntry);
+		Assert.assertTrue("No ACT entry found.", entry instanceof IActPodFileEntry);
 
-		((ISitPodFileEntry) entry).getData();
+		int count = ((IActPodFileEntry) entry).getData().getColorCount();
+
+		Assert.assertEquals("Color count is not " + COLOR_COUNT, COLOR_COUNT, count);
 	}
 }

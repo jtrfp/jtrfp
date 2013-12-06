@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with jtrfp.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.jtrfp;
+package org.jtrfp.jtrfp;
 
 import java.io.File;
 import java.io.IOException;
@@ -23,51 +23,39 @@ import java.io.IOException;
 
 import org.jtrfp.jtrfp.FileLoadException;
 import org.jtrfp.jtrfp.FileStoreException;
-import org.jtrfp.jtrfp.act.ActColor;
 import org.jtrfp.jtrfp.act.ActFile;
+import org.jtrfp.jtrfp.raw.RawFile;
+import org.jtrfp.jtrfp.raw.RawImage;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 
-
-public class ActFileTest {
+public class RawImageTest {
 
 	@Rule
     public TemporaryFolder temporaryFolder = new TemporaryFolder();
 	
-	private static final int COLOR_COUNT = 256;
-
-	private static final ActColor COLOR_37 = new ActColor(0x3A, 0x2B, 0x21);
-
-	private ActFile actFile;
+	private RawImage rawImage;
 
 	@Before
-	public void setUp() {
-		File file = new File(ITestConfig.EXTRACTED_MTM2_FILES_DIR, "art/crazy98.act");
+	public void setUp() throws FileLoadException {
+		File file = new File(ITestConfig.EXTRACTED_MTM2_FILES_DIR, "art/C8OFF31.RAW");
+		Assert.assertTrue("Raw file does not exist.", file.exists());
+		RawFile rawFile = new RawFile(file);
 
-		Assert.assertTrue("ACT file does not exist.", file.exists());
+		File file2 = new File(ITestConfig.EXTRACTED_MTM2_FILES_DIR, "art/C8OFF31.ACT");
+		Assert.assertTrue("ACT file does not exist.", file2.exists());
+		ActFile actFile = new ActFile(file2);
 
-		actFile = new ActFile(file);
+		rawImage = new RawImage(rawFile.getRawData(), actFile.getData());
 	}
 
 	@Test
-	public void testColorCount() throws FileLoadException {
-		int count = actFile.getData().getColorCount();
-		Assert.assertEquals("Color count is not " + COLOR_COUNT, COLOR_COUNT, count);
-	}
-
-	@Test
-	public void testColors() throws FileLoadException {
-		ActColor color = actFile.getData().getColor(37);
-		Assert.assertEquals("tested color count not corrrect.", COLOR_37, color);
-	}
-
-	@Test
-	public void testStoreAsBitmap() throws IOException, FileStoreException, FileLoadException  {
+	public void testStoreAsBitmap() throws IOException, FileStoreException  {
 		File bitmapFile = temporaryFolder.newFile();
-		actFile.getData().toBitmapFile(bitmapFile);
+		rawImage.storeAsBitmap(bitmapFile);
 
 		Assert.assertTrue("Bitmap has not been created.", bitmapFile.exists());
 

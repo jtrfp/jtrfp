@@ -14,43 +14,36 @@
  * You should have received a copy of the GNU General Public License
  * along with jtrfp.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.jtrfp;
+package org.jtrfp.jtrfp;
 
 import java.io.File;
 
 
 
 import org.jtrfp.jtrfp.FileLoadException;
-import org.jtrfp.jtrfp.act.IActPodFileEntry;
-import org.jtrfp.jtrfp.pod.IPodFileEntry;
-import org.jtrfp.jtrfp.pod.PodFile;
+import org.jtrfp.jtrfp.raw.IRawData;
+import org.jtrfp.jtrfp.raw.RawFile;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class ActDataTest {
+public class RawFileTest {
 
-	private static final int COLOR_COUNT = 256;
-
-	private PodFile podFile;
+	private RawFile rawFile;
 
 	@Before
 	public void setUp() {
-		File file = new File(ITestConfig.MTM2_DIR, "crazy98.pod");
+		File file = new File(ITestConfig.EXTRACTED_MTM2_FILES_DIR, "ART/C8OFF31.RAW");
 
-		Assert.assertTrue("Test POD file does not exist.", file.exists() && file.isFile());
+		Assert.assertTrue("Raw file does not exist.", file.exists());
 
-		podFile = new PodFile(file);
+		rawFile = new RawFile(file);
 	}
 
 	@Test
-	public void testEntryGetData() throws FileLoadException {
-		IPodFileEntry entry = podFile.getData().findEntry("art\\crazy98.act");
-
-		Assert.assertTrue("No ACT entry found.", entry instanceof IActPodFileEntry);
-
-		int count = ((IActPodFileEntry) entry).getData().getColorCount();
-
-		Assert.assertEquals("Color count is not " + COLOR_COUNT, COLOR_COUNT, count);
+	public void testGetRawdata() throws FileLoadException {
+		IRawData rawData = rawFile.getRawData();
+		Assert.assertEquals("Width should be 64.", 64, rawData.getWidth());
+		Assert.assertEquals("Height should be 64.", 64, rawData.getHeight());
 	}
 }

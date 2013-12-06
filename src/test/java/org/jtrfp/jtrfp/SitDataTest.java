@@ -14,38 +14,39 @@
  * You should have received a copy of the GNU General Public License
  * along with jtrfp.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.jtrfp;
-
-import static org.junit.Assert.assertTrue;
+package org.jtrfp.jtrfp;
 
 import java.io.File;
 
 
 
 import org.jtrfp.jtrfp.FileLoadException;
-import org.jtrfp.jtrfp.trk.ITrkData;
-import org.jtrfp.jtrfp.trk.TrkFile;
+import org.jtrfp.jtrfp.pod.IPodFileEntry;
+import org.jtrfp.jtrfp.pod.PodFile;
+import org.jtrfp.jtrfp.sit.ISitPodFileEntry;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TrkFileTest {
+public class SitDataTest {
 
-	private static final String TRUCK_PATH = "TRUCK\\DIGGER.TRK";
-
-	private TrkFile trkFile;
+	private PodFile podFile;
 
 	@Before
 	public void setUp() {
-		File file = new File(ITestConfig.EXTRACTED_MTM2_FILES_DIR, TRUCK_PATH);
+		File file = new File(ITestConfig.MTM2_DIR, "crazy98.pod");
 
-		assertTrue("Test truck does not exist", file.exists() && file.isFile());
-		trkFile = new TrkFile(file);
+		Assert.assertTrue("Test POD file does not exist.", file.exists() && file.isFile());
+
+		podFile = new PodFile(file);
 	}
 
 	@Test
-	public void testGetData() throws FileLoadException {
-		ITrkData trkData = trkFile.getData();
+	public void testEntryGetData() throws FileLoadException {
+		IPodFileEntry entry = podFile.getData().findEntry("world\\crazy98.sit");
 
-		assertTrue("Truck name mismatch", "Grave Digger".equals(trkData.getTruckName()));
+		Assert.assertTrue("No SIT entry found.", entry instanceof ISitPodFileEntry);
+
+		((ISitPodFileEntry) entry).getData();
 	}
 }
