@@ -1,5 +1,7 @@
 # jtrfp
 
+[![Build Status](https://travis-ci.org/jtrfp/jtrfp.png?branch=master)](https://travis-ci.org/jtrfp/jtrfp)
+
 This project provides java tools and file parsers for Terminal Reality games. It is intended to be used in other game projects like the following.
 
 * mtmX (https://github.com/jtrfp/mtmx)
