@@ -20,6 +20,7 @@ public class Struct implements IStructureElement {
 
 	private final String name;
 	
+	@SuppressWarnings("unused")
 	private final IStructureElement[] member;
 
 	public Struct(String name, IStructureElement[] member) {
@@ -31,19 +32,20 @@ public class Struct implements IStructureElement {
 	@Override
 	public IStructureElementAddress getAddress() {
 		// TODO Auto-generated method stub
-		return null;
+	    	throw new UnsupportedOperationException("Not implemented");
+		//return null;
 	}
 
 	@Override
 	public String getName() {
-		// TODO Auto-generated method stub
-		return null;
+		return name;
 	}
 
 	@Override
 	public int getSize() {
 		// TODO Auto-generated method stub
-		return 0;
+	    	throw new UnsupportedOperationException("Not implemented");
+		//return 0;
 	}
 
 }

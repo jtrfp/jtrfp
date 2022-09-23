@@ -18,8 +18,6 @@ package org.jtrfp.jtrfp;
 
 import java.io.File;
 
-import org.jtrfp.jtrfp.FileLoadException;
-import org.jtrfp.jtrfp.FileStoreException;
 import org.jtrfp.jtrfp.bin.IBinPodFileEntry;
 import org.jtrfp.jtrfp.pod.IPodData;
 import org.jtrfp.jtrfp.pod.IPodFileEntry;

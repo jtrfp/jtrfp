@@ -18,6 +18,7 @@ package org.jtrfp.jtrfp.internal.pod.structure;
 
 public class AbsoluteAddress implements IStructureElementAddress{
 
+	@SuppressWarnings("unused")
 	private final int address;
 
 	public AbsoluteAddress(int address) {

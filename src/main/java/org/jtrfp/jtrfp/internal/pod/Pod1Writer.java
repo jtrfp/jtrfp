@@ -33,7 +33,7 @@ import org.jtrfp.jtrfp.internal.pod.structure.StructureTraversal;
 
 public class Pod1Writer {
 
-	private static final int BUFFER_SIZE = 1024;
+	//private static final int BUFFER_SIZE = 1024;
 
 	public static void write(File[] inFiles, File outFile) throws FileStoreException {
 		
