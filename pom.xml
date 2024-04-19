@@ -62,7 +62,23 @@
 				<version>2.16</version>
 				<configuration>
 					<excludes>
-						<exclude>**/*Test.java</exclude>
+						<!--Bypass these until we come up with a way to make them run on end-user systems-->
+						<exclude>**/ActDataTest.java</exclude>
+						<exclude>**/ActFileTest.java</exclude>
+						<exclude>**/AllTests.java</exclude>
+						<exclude>**/BinFileTest.java</exclude>
+						<exclude>**/ClrDataTest.java</exclude>
+						<exclude>**/CockpitPodInfoTest.java</exclude>
+						<exclude>**/KfmFileTest.java</exclude>
+						<exclude>**/LstDataTest.java</exclude>
+						<exclude>**/PodFileTest.java</exclude>
+						<exclude>**/PodIniFileTest.java</exclude>
+						<exclude>**/PodLstFileTest.java</exclude>
+						<exclude>**/RawDecodeTest.java</exclude>
+						<exclude>**/RawFileTest.java</exclude>
+						<exclude>**/RawImageTest.java</exclude>
+						<exclude>**/SitDataTest.java</exclude>
+						<exclude>**/TrkFileTest.java</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
