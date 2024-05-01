@@ -57,6 +57,11 @@
 			<version>4.13.1</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.jtrfp</groupId>
+			<artifactId>jfdt</artifactId>
+			<version>1.2.0-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>
