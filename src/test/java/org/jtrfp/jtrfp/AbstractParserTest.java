@@ -12,6 +12,7 @@
 
 package org.jtrfp.jtrfp;
 
+import java.awt.Dimension;
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -95,9 +96,9 @@ public abstract class AbstractParserTest<T extends ThirdPartyParseable> extends 
 	    final BeanMap subjectMap = new BeanMap(subject);
 	    final BeanMap newMap = new BeanMap(newAsset);
 	    compareBeanRecursive(subjectMap, newMap);
-	} catch(Exception e) {
+	} catch(Throwable t) {
 	    printLineByLineComparison();
-	    throw e;
+	    throw t;
 	}
     }//end testReadWrite()
 
@@ -115,8 +116,8 @@ public abstract class AbstractParserTest<T extends ThirdPartyParseable> extends 
 	    final Object refVal = ent.getValue();
 	    final String key = (String)ent.getKey();
 	    final Object subjectVal = subjectMap.get(key);
-	    //System.out.println("key="+key+" refVal="+lVal+" testVal="+rVal);
-	    if(refVal instanceof String || refVal instanceof Number || refVal instanceof Class || refVal instanceof Comparable) {
+	    //System.out.println("key="+key+" refVal="+refVal+" refValClass="+refVal.getClass().getName());
+	    if(refVal instanceof String || refVal instanceof Number || refVal instanceof Class || refVal instanceof Comparable || refVal instanceof Dimension) {
 		assertEquals("Property: "+key,refVal,subjectMap.get(key));
 	    } else if(refVal instanceof List) {
 		final List<?> refList = (List<?>)refVal;
@@ -139,13 +140,17 @@ public abstract class AbstractParserTest<T extends ThirdPartyParseable> extends 
 	InputStream is = null;
 	try{is = getClass().getResourceAsStream(getResourceString());
 	 assertNotNull(is);
-	 final BufferedReader orig = new BufferedReader(new InputStreamReader(is));
+	 final byte [] origBytes = is.readAllBytes();
+	 final BufferedReader orig = new BufferedReader(new InputStreamReader(new ByteArrayInputStream(origBytes)));
+	 //final BufferedReader orig = new BufferedReader(new InputStreamReader(is));
 
-	 final PipedInputStream pis = new PipedInputStream();
-	 final PipedOutputStream os = new PipedOutputStream(pis);
-	 final BufferedReader saved = new BufferedReader(new InputStreamReader(pis));
+	 //final PipedInputStream pis = new PipedInputStream();
+	 //final PipedOutputStream os = new PipedOutputStream(pis);
+	 //final BufferedReader saved = new BufferedReader(new InputStreamReader(pis));
+	 final ByteArrayOutputStream os = new ByteArrayOutputStream();
 	 assertNotNull(os);
 	 new Parser().writeBean(subject, os);
+	 final BufferedReader saved = new BufferedReader(new InputStreamReader(new ByteArrayInputStream(os.toByteArray())));
 	 
 	 String oString, sString = "";
 	 do {
