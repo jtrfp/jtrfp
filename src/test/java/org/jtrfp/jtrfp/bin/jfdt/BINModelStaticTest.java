@@ -44,21 +44,77 @@ public class BINModelStaticTest extends AbstractParserTest<BINFile.Model> {
     }
     
     @Test
-    public void testVertices() {
+    public void testVertex0X() {
 	List<BINFile.Model.Vertex> vertices = subject.getVertices();
 	assertEquals(0x00,vertices.get(0).getX());
+    }
+    
+    @Test
+    public void testVertex0Y() {
+	List<BINFile.Model.Vertex> vertices = subject.getVertices();
 	assertEquals(0x01,vertices.get(0).getY());
+    }
+    
+    @Test
+    public void testVertex0Z() {
+	List<BINFile.Model.Vertex> vertices = subject.getVertices();
 	assertEquals(0x02,vertices.get(0).getZ());
+    }
+    ////
+    @Test
+    public void testVertex1X() {
+	List<BINFile.Model.Vertex> vertices = subject.getVertices();
 	assertEquals(0x03,vertices.get(1).getX());
+    }
+    
+    @Test
+    public void testVertex1Y() {
+	List<BINFile.Model.Vertex> vertices = subject.getVertices();
 	assertEquals(0x04,vertices.get(1).getY());
+    }
+    
+    @Test
+    public void testVertex1Z() {
+	List<BINFile.Model.Vertex> vertices = subject.getVertices();
 	assertEquals(0x05,vertices.get(1).getZ());
+    }
+    ////
+    @Test
+    public void testVertex2X() {
+	List<BINFile.Model.Vertex> vertices = subject.getVertices();
 	assertEquals(0x06,vertices.get(2).getX());
+    }
+    
+    @Test
+    public void testVertex2Y() {
+	List<BINFile.Model.Vertex> vertices = subject.getVertices();
 	assertEquals(0x07,vertices.get(2).getY());
+    }
+    
+    @Test
+    public void testVertex2Z() {
+	List<BINFile.Model.Vertex> vertices = subject.getVertices();
 	assertEquals(0x08,vertices.get(2).getZ());
+    }
+    ////
+    @Test
+    public void testVertex3X() {
+	List<BINFile.Model.Vertex> vertices = subject.getVertices();
 	assertEquals(0x09,vertices.get(3).getX());
+    }
+    
+    @Test
+    public void testVertex3Y() {
+	List<BINFile.Model.Vertex> vertices = subject.getVertices();
 	assertEquals(0x0A,vertices.get(3).getY());
+    }
+    
+    @Test
+    public void testVertex3Z() {
+	List<BINFile.Model.Vertex> vertices = subject.getVertices();
 	assertEquals(0x0B,vertices.get(3).getZ());
     }
+    ////
     
     @Test
     public void testFirstDataBlockType() {
@@ -112,21 +168,81 @@ public class BINModelStaticTest extends AbstractParserTest<BINFile.Model> {
 	final OpaqueZeroFaceBlock fb = (OpaqueZeroFaceBlock)(subject.getDataBlocks().get(1));
 	assertEquals(0x03,fb.getMagic());
     }
-    
+    ////
     @Test
-    public void testSecondDataBlockVertices() {
+    public void testSecondDataBlockVertex0Index() {
 	final OpaqueZeroFaceBlock fb = (OpaqueZeroFaceBlock)(subject.getDataBlocks().get(1));
 	assertEquals(0x00,((FaceBlockVertexWithUV)(fb.getVertices().get(0))).getVertexIndex());
+    }
+    
+    @Test
+    public void testSecondDataBlockVertex0U() {
+	final OpaqueZeroFaceBlock fb = (OpaqueZeroFaceBlock)(subject.getDataBlocks().get(1));
 	assertEquals(0x01,((FaceBlockVertexWithUV)(fb.getVertices().get(0))).getTextureCoordinateU());
+    }
+    
+    @Test
+    public void testSecondDataBlockVertex0V() {
+	final OpaqueZeroFaceBlock fb = (OpaqueZeroFaceBlock)(subject.getDataBlocks().get(1));
 	assertEquals(0x02,((FaceBlockVertexWithUV)(fb.getVertices().get(0))).getTextureCoordinateV());
+    }
+    ////
+    @Test
+    public void testSecondDataBlockVertex1Index() {
+	final OpaqueZeroFaceBlock fb = (OpaqueZeroFaceBlock)(subject.getDataBlocks().get(1));
 	assertEquals(0x03,((FaceBlockVertexWithUV)(fb.getVertices().get(1))).getVertexIndex());
+    }
+    
+    @Test
+    public void testSecondDataBlockVertex1U() {
+	final OpaqueZeroFaceBlock fb = (OpaqueZeroFaceBlock)(subject.getDataBlocks().get(1));
 	assertEquals(0x04,((FaceBlockVertexWithUV)(fb.getVertices().get(1))).getTextureCoordinateU());
+    }
+    
+    @Test
+    public void testSecondDataBlockVertex1V() {
+	final OpaqueZeroFaceBlock fb = (OpaqueZeroFaceBlock)(subject.getDataBlocks().get(1));
 	assertEquals(0x05,((FaceBlockVertexWithUV)(fb.getVertices().get(1))).getTextureCoordinateV());
+    }
+    
+    ////
+    
+    @Test
+    public void testSecondDataBlockVertex2Index() {
+	final OpaqueZeroFaceBlock fb = (OpaqueZeroFaceBlock)(subject.getDataBlocks().get(1));
 	assertEquals(0x06,((FaceBlockVertexWithUV)(fb.getVertices().get(2))).getVertexIndex());
+    }
+    
+    @Test
+    public void testSecondDataBlockVertex2U() {
+	final OpaqueZeroFaceBlock fb = (OpaqueZeroFaceBlock)(subject.getDataBlocks().get(1));
 	assertEquals(0x07,((FaceBlockVertexWithUV)(fb.getVertices().get(2))).getTextureCoordinateU());
+    }
+    
+    @Test
+    public void testSecondDataBlockVertex2V() {
+	final OpaqueZeroFaceBlock fb = (OpaqueZeroFaceBlock)(subject.getDataBlocks().get(1));
 	assertEquals(0x08,((FaceBlockVertexWithUV)(fb.getVertices().get(2))).getTextureCoordinateV());
+    }
+    
+    ////
+    
+    @Test
+    public void testSecondDataBlockVertex3Index() {
+	final OpaqueZeroFaceBlock fb = (OpaqueZeroFaceBlock)(subject.getDataBlocks().get(1));
 	assertEquals(0x09,((FaceBlockVertexWithUV)(fb.getVertices().get(3))).getVertexIndex());
+    }
+    ////
+    
+    @Test
+    public void testSecondDataBlockVertex3U() {
+	final OpaqueZeroFaceBlock fb = (OpaqueZeroFaceBlock)(subject.getDataBlocks().get(1));
 	assertEquals(0x0A,((FaceBlockVertexWithUV)(fb.getVertices().get(3))).getTextureCoordinateU());
+    }
+    
+    @Test
+    public void testSecondDataBlockVertex3V() {
+	final OpaqueZeroFaceBlock fb = (OpaqueZeroFaceBlock)(subject.getDataBlocks().get(1));
 	assertEquals(0x0B,((FaceBlockVertexWithUV)(fb.getVertices().get(3))).getTextureCoordinateV());
     }
     
