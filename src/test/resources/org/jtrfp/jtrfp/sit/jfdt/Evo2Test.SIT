@@ -1,0 +1,586 @@
+version
+7
+testLVL.lvl
+authorName
+Test Author Name
+detailed description
+Test Description
+!Race Track Name
+Test Track
+Track Logo .BMP file
+testTrackLogo.bmp
+Track Race Type
+2
+@Redbook Audio Track
+3
+!ambient sound,track length,weather mask
+4,5555.5555,6666
+viewmode,spotd,spotp,spoth,zoom
+4,5,6,7,8
+$racetime, raceStartTime, dragDebugTimer
+1.1,2.2,3.3
+controlflag, autoShift, autoStage, bothStaged, bothStagedPrev
+1,1,1,1,1
+stageComFlag, bonusLapFlag
+1,1
+*** Vehicles ***
+8
+Vehicle 1 of 8 -------------------------
+staticName
+testTruckFile.trk
+wPos
+1.1,2.2,3.3
+bvel
+3.3,4.4,5.5
+wOrient
+6.6,7.7,8.8
+p,q,r
+9.9,1.1,2.2
+faxle.angle,faxle.steering_angle
+3.3,-4.4
+faxle.rtire.on_gnd,faxle.ltire.on_gnd
+-1,1
+raxle.angle,raxle.steering_angle
+0.0,1.1
+raxle.rtire.on_gnd,raxle.ltire.on_gnd
+1,-1
+xm.gear
+4
+ap.autopilot,ap.cnumber
+1,1
+ap.speed_control,ap.course_control,ap.lasterror
+2.2,3.3,4.4
+!ap.courseToFollow
+2
+@damageCode
+3
+$heliTimer,heliTheta,heliPhi,heliPsi
+5.5,6.6,7.7,8.8
+heliPos
+9.9,0.0,1.1
+Vehicle 2 of 8 -------------------------
+staticName
+testTruckFile.trk
+wPos
+1.1,2.2,3.3
+bvel
+3.3,4.4,5.5
+wOrient
+6.6,7.7,8.8
+p,q,r
+9.9,1.1,2.2
+faxle.angle,faxle.steering_angle
+3.3,-4.4
+faxle.rtire.on_gnd,faxle.ltire.on_gnd
+-1,1
+raxle.angle,raxle.steering_angle
+0.0,1.1
+raxle.rtire.on_gnd,raxle.ltire.on_gnd
+1,-1
+xm.gear
+4
+ap.autopilot,ap.cnumber
+1,1
+ap.speed_control,ap.course_control,ap.lasterror
+2.2,3.3,4.4
+!ap.courseToFollow
+2
+@damageCode
+3
+$heliTimer,heliTheta,heliPhi,heliPsi
+5.5,6.6,7.7,8.8
+heliPos
+9.9,0.0,1.1
+Vehicle 3 of 8 -------------------------
+staticName
+testTruckFile.trk
+wPos
+1.1,2.2,3.3
+bvel
+3.3,4.4,5.5
+wOrient
+6.6,7.7,8.8
+p,q,r
+9.9,1.1,2.2
+faxle.angle,faxle.steering_angle
+3.3,-4.4
+faxle.rtire.on_gnd,faxle.ltire.on_gnd
+-1,1
+raxle.angle,raxle.steering_angle
+0.0,1.1
+raxle.rtire.on_gnd,raxle.ltire.on_gnd
+1,-1
+xm.gear
+4
+ap.autopilot,ap.cnumber
+1,1
+ap.speed_control,ap.course_control,ap.lasterror
+2.2,3.3,4.4
+!ap.courseToFollow
+2
+@damageCode
+3
+$heliTimer,heliTheta,heliPhi,heliPsi
+5.5,6.6,7.7,8.8
+heliPos
+9.9,0.0,1.1
+Vehicle 4 of 8 -------------------------
+staticName
+testTruckFile.trk
+wPos
+1.1,2.2,3.3
+bvel
+3.3,4.4,5.5
+wOrient
+6.6,7.7,8.8
+p,q,r
+9.9,1.1,2.2
+faxle.angle,faxle.steering_angle
+3.3,-4.4
+faxle.rtire.on_gnd,faxle.ltire.on_gnd
+-1,1
+raxle.angle,raxle.steering_angle
+0.0,1.1
+raxle.rtire.on_gnd,raxle.ltire.on_gnd
+1,-1
+xm.gear
+4
+ap.autopilot,ap.cnumber
+1,1
+ap.speed_control,ap.course_control,ap.lasterror
+2.2,3.3,4.4
+!ap.courseToFollow
+2
+@damageCode
+3
+$heliTimer,heliTheta,heliPhi,heliPsi
+5.5,6.6,7.7,8.8
+heliPos
+9.9,0.0,1.1
+Vehicle 5 of 8 -------------------------
+staticName
+testTruckFile.trk
+wPos
+1.1,2.2,3.3
+bvel
+3.3,4.4,5.5
+wOrient
+6.6,7.7,8.8
+p,q,r
+9.9,1.1,2.2
+faxle.angle,faxle.steering_angle
+3.3,-4.4
+faxle.rtire.on_gnd,faxle.ltire.on_gnd
+-1,1
+raxle.angle,raxle.steering_angle
+0.0,1.1
+raxle.rtire.on_gnd,raxle.ltire.on_gnd
+1,-1
+xm.gear
+4
+ap.autopilot,ap.cnumber
+1,1
+ap.speed_control,ap.course_control,ap.lasterror
+2.2,3.3,4.4
+!ap.courseToFollow
+2
+@damageCode
+3
+$heliTimer,heliTheta,heliPhi,heliPsi
+5.5,6.6,7.7,8.8
+heliPos
+9.9,0.0,1.1
+Vehicle 6 of 8 -------------------------
+staticName
+testTruckFile.trk
+wPos
+1.1,2.2,3.3
+bvel
+3.3,4.4,5.5
+wOrient
+6.6,7.7,8.8
+p,q,r
+9.9,1.1,2.2
+faxle.angle,faxle.steering_angle
+3.3,-4.4
+faxle.rtire.on_gnd,faxle.ltire.on_gnd
+-1,1
+raxle.angle,raxle.steering_angle
+0.0,1.1
+raxle.rtire.on_gnd,raxle.ltire.on_gnd
+1,-1
+xm.gear
+4
+ap.autopilot,ap.cnumber
+1,1
+ap.speed_control,ap.course_control,ap.lasterror
+2.2,3.3,4.4
+!ap.courseToFollow
+2
+@damageCode
+3
+$heliTimer,heliTheta,heliPhi,heliPsi
+5.5,6.6,7.7,8.8
+heliPos
+9.9,0.0,1.1
+Vehicle 7 of 8 -------------------------
+staticName
+testTruckFile.trk
+wPos
+1.1,2.2,3.3
+bvel
+3.3,4.4,5.5
+wOrient
+6.6,7.7,8.8
+p,q,r
+9.9,1.1,2.2
+faxle.angle,faxle.steering_angle
+3.3,-4.4
+faxle.rtire.on_gnd,faxle.ltire.on_gnd
+-1,1
+raxle.angle,raxle.steering_angle
+0.0,1.1
+raxle.rtire.on_gnd,raxle.ltire.on_gnd
+1,-1
+xm.gear
+4
+ap.autopilot,ap.cnumber
+1,1
+ap.speed_control,ap.course_control,ap.lasterror
+2.2,3.3,4.4
+!ap.courseToFollow
+2
+@damageCode
+3
+$heliTimer,heliTheta,heliPhi,heliPsi
+5.5,6.6,7.7,8.8
+heliPos
+9.9,0.0,1.1
+Vehicle 8 of 8 -------------------------
+staticName
+testTruckFile.trk
+wPos
+1.1,2.2,3.3
+bvel
+3.3,4.4,5.5
+wOrient
+6.6,7.7,8.8
+p,q,r
+9.9,1.1,2.2
+faxle.angle,faxle.steering_angle
+3.3,-4.4
+faxle.rtire.on_gnd,faxle.ltire.on_gnd
+-1,1
+raxle.angle,raxle.steering_angle
+0.0,1.1
+raxle.rtire.on_gnd,raxle.ltire.on_gnd
+1,-1
+xm.gear
+4
+ap.autopilot,ap.cnumber
+1,1
+ap.speed_control,ap.course_control,ap.lasterror
+2.2,3.3,4.4
+!ap.courseToFollow
+2
+@damageCode
+3
+$heliTimer,heliTheta,heliPhi,heliPsi
+5.5,6.6,7.7,8.8
+heliPos
+9.9,0.0,1.1
+*** Boxes ***
+// boxTypeList
+2
+CVehicle 6
+CBox 1
+// boxCount
+2
+// Box name list
+1 CCollide
+2 CCollide
+// Box data list
+{ 1 CCollide
+	"testName"    // name
+	"testStaticName.smf"    // staticName
+	5.5,6.6,7.7    // size
+	2.2,3.3,4.4    // wPos
+	5.5,6.6,7.7    // wOrient
+	8.8    // mass
+	7    // priority
+	"NULL0.WAV"    // soundEffectWavName
+	"NULL1.WAV"    // continuousWavName
+	8    // parent
+	9.9    // timePerFrame
+	1    // castShadowOnMe
+	3    // collisionType
+} CCollide
+{ 2 CCollide
+	"testName"    // name
+	"testStaticName.smf"    // staticName
+	5.5,6.6,7.7    // size
+	2.2,3.3,4.4    // wPos
+	5.5,6.6,7.7    // wOrient
+	8.8    // mass
+	7    // priority
+	"NULL0.WAV"    // soundEffectWavName
+	"NULL1.WAV"    // continuousWavName
+	8    // parent
+	9.9    // timePerFrame
+	1    // castShadowOnMe
+	3    // collisionType
+} CCollide
+%%*** Environmental Lights ***
+2
+Environmental light 1 of 2 -------------
+type
+1
+wPos
+2.2,3.3,4.4
+initWOrient
+5.5,6.6,7.7
+headingSpinSpeed
+8.8
+sourceOrient,sourceRadius,sourceTexture
+2,9.9,sourceTexture.raw
+coneLength,coneBaseRadius,coneRimRadius,coneTexture
+1.1,2.2,3.3,coneTexture.raw
+intensity
+4444
+msOn,msOff
+1,2
+createsLensFlare
+1
+parent
+2
+Environmental light 2 of 2 -------------
+type
+1
+wPos
+2.2,3.3,4.4
+initWOrient
+5.5,6.6,7.7
+headingSpinSpeed
+8.8
+sourceOrient,sourceRadius,sourceTexture
+2,9.9,sourceTexture.raw
+coneLength,coneBaseRadius,coneRimRadius,coneTexture
+1.1,2.2,3.3,coneTexture.raw
+intensity
+4444
+msOn,msOff
+1,2
+createsLensFlare
+1
+parent
+2
+*** Course ***
+c1Count,course_direction
+2,3
+********************************************* 1
+ctype,cspeed_type
+1,2
+cstart
+0.0,1.1,2.2
+cend
+3.3,4.4,5.5
+cdec_point,cspeed,lastentry
+6.6,7.7,0
+&cSpeedLimit,cTrackWidth
+8.8,9.9
+********************************************* 3
+ctype,cspeed_type
+1,2
+cstart
+0.0,1.1,2.2
+cend
+3.3,4.4,5.5
+cdec_point,cspeed,lastentry
+6.6,7.7,0
+&cSpeedLimit,cTrackWidth
+8.8,9.9
+@*********** Extended Course Definitions *************
+4
+[Course 1] c1Count,course_direction
+0,0
+[Course 2] c1Count,course_direction
+0,0
+[Course 3] c1Count,course_direction
+0,0
+[Course 4] c1Count,course_direction
+0,0
+#*** Paths ***
+pathCount
+2
+Path 1 of 2 ----------------------------
+pointCount
+2
+type
+1
+direction
+2
+cycles
+3
+time
+4
+pauseTimeElapsed
+5
+t
+6
+tension
+7
+stopFlag
+8
+collisionType
+9
+object
+10
+Point 1 of 2 ---------------------------
+wPos
+111.1,222.2,333.3
+wOrient
+444.4,555.5,666.6
+vel
+7
+time
+8
+pauseTime
+9
+segmentFlag
+1
+orientFlag
+1
+velFlag
+1
+followTerrainFlag
+1
+animationFlag
+1
+lightFlag
+1
+AIFlag
+1
+pointWavName
+pointWav.wav
+continuousWavName
+continuousWav.wav
+Point 2 of 2 ---------------------------
+wPos
+111.1,222.2,333.3
+wOrient
+444.4,555.5,666.6
+vel
+7
+time
+8
+pauseTime
+9
+segmentFlag
+1
+orientFlag
+1
+velFlag
+1
+followTerrainFlag
+1
+animationFlag
+0
+lightFlag
+0
+AIFlag
+1
+pointWavName
+pointWav.wav
+continuousWavName
+continuousWav.wav
+Path 2 of 2 ----------------------------
+pointCount
+2
+type
+1
+direction
+2
+cycles
+3
+time
+4
+pauseTimeElapsed
+5
+t
+6
+tension
+7
+stopFlag
+8
+collisionType
+9
+object
+10
+Point 1 of 2 ---------------------------
+wPos
+111.1,222.2,333.3
+wOrient
+444.4,555.5,666.6
+vel
+7
+time
+8
+pauseTime
+9
+segmentFlag
+1
+orientFlag
+1
+velFlag
+1
+followTerrainFlag
+1
+animationFlag
+0
+lightFlag
+0
+AIFlag
+1
+pointWavName
+pointWav.wav
+continuousWavName
+continuousWav.wav
+Point 2 of 2 ---------------------------
+wPos
+111.1,222.2,333.3
+wOrient
+444.4,555.5,666.6
+vel
+7
+time
+8
+pauseTime
+9
+segmentFlag
+1
+orientFlag
+1
+velFlag
+1
+followTerrainFlag
+1
+animationFlag
+0
+lightFlag
+0
+AIFlag
+1
+pointWavName
+pointWav.wav
+continuousWavName
+continuousWav.wav
+*** Stadium ***
+!stadiumFlag,x,z,sx,sz,stadiumModelName
+1,2,3,4,5,testStadiumModel.bin
+*** Backdrop ***
+backdropType,backdropCount
+2,3
+backdropModelName
+testBackdrop0.SMF
+testBackdrop1.SMF
+testBackdrop2.SMF
