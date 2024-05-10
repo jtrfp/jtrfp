@@ -45,7 +45,7 @@ public abstract class AbstractIRawDataTest extends TestCase {
      * @since May 2, 2024
      */
     protected InputStream getInputStream() {
-	final InputStream result = AbstractIRawDataTest.class.getResourceAsStream("/dummyFiles/test.RAW");
+	final InputStream result = AbstractIRawDataTest.class.getResourceAsStream("/org/jtrfp/jtrfp/raw/jfdt/test.RAW");
 	assertNotNull(result);
 	return result;
     }

@@ -253,7 +253,7 @@ public class BINModelStaticTest extends AbstractParserTest<BINFile.Model> {
 
     @Override
     protected String getResourceString() {
-	return "/dummyFiles/testStatic.BIN";
+	return "/org/jtrfp/jtrfp/bin/jfdt/testStatic.BIN";
     }
 
 }//end BINModelTest

@@ -43,7 +43,7 @@ public abstract class AbstractIBinDataTest extends TestCase {
      * @since May 2, 2024
      */
     protected InputStream getInputStream() {
-	final InputStream result = AbstractIBinDataTest.class.getResourceAsStream("/dummyFiles/testStatic.BIN");
+	final InputStream result = AbstractIBinDataTest.class.getResourceAsStream("/org/jtrfp/jtrfp/bin/jfdt/testStatic.BIN");
 	assertNotNull(result);
 	return result;
     }

@@ -57,7 +57,7 @@ public class RAWFileTest extends AbstractParserTest<RAWFile> {
      */
     @Override
     protected String getResourceString() {
-	return "/dummyFiles/test.RAW";
+	return "/org/jtrfp/jtrfp/raw/jfdt/test.RAW";
     }
 
 }//end RAWFileTest
