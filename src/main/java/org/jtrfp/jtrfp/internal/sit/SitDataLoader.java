@@ -91,7 +91,7 @@ public final class SitDataLoader {
 
 				readRotation(reader, i, box);
 
-				if ("model" == reader.readLine()) {
+				if (reader.readLine().contentEquals("model")) {
 					box.setModelName(reader.readLine());
 				} else {
 					reader.readLine();
