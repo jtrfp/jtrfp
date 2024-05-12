@@ -1,0 +1,96 @@
+MTM2 truckName
+Test Truck
+truckModelBaseName
+testBin.BIN
+tireModelBaseName
+testTire.BIN
+axleModelName
+testAxle.BIN
+shockTextureName
+testShock.RAW
+barTextureName
+testAxleBar.RAW
+axlebarOffset
+1.1,2.2,3.3
+driveshaftPos
+4.4,5.5,6.6
+faxle.rtire.static_bpos.x
+1.1
+faxle.ltire.static_bpos.x
+2.2
+raxle.rtire.static_bpos.x
+3.3
+raxle.ltire.static_bpos.x
+4.4
+faxle.rtire.static_bpos.y
+5.5
+faxle.ltire.static_bpos.y
+6.6
+raxle.rtire.static_bpos.y
+7.7
+raxle.ltire.static_bpos.y
+8.8
+faxle.rtire.static_bpos.z
+9.9
+faxle.ltire.static_bpos.z
+1.1
+raxle.rtire.static_bpos.z
+2.2
+raxle.ltire.static_bpos.z
+3.3
+Scrape point 1 (body axis) x,y,z
+4.4,5.5,6.6
+Scrape point 2 (body axis) x,y,z
+7.7,8.8,9.9
+Scrape point 3 (body axis) x,y,z
+1.1,2.2,3.3
+Scrape point 4 (body axis) x,y,z
+4.4,5.5,6.6
+Scrape point 5 (body axis) x,y,z
+7.7,8.8,9.9
+Scrape point 6 (body axis) x,y,z
+1.1,2.2,3.3
+Scrape point 7 (body axis) x,y,z
+4.4,5.5,6.6
+Scrape point 8 (body axis) x,y,z
+7.7,8.8,9.9
+Scrape point 9 (body axis) x,y,z
+1.1,2.2,3.3
+Scrape point 10 (body axis) x,y,z
+4.4,5.5,6.6
+Scrape point 11 (body axis) x,y,z
+7.7,8.8,9.9
+Scrape point 12 (body axis) x,y,z
+1.1,2.2,3.3
+Instrument Cluster
+testInstrumentCluster
+Wave File
+test0.wav
+test1.wav
+test2.wav
+Number of Lights
+2
+Light 0 type
+3
+Light 0 body axis pos x,y,z (ft), bitmap radius (ft)
+1.1,2.2,3.3,4.4
+Light 0 heading (rad), pitch (rad), heading spin speed (rad/sec)
+5.5,6.6,7.7
+Light 0 cone: length (ft), base radius (ft), rim radius (ft), texture name
+1.1,2.2,3.3,testLightTexture.RAW
+Light 0 source: bitmap name
+testLightSourceBitmap.RAW
+Light 0 ms on, ms off (0 if light doesn't blink)
+4,5
+Light 1 type
+3
+Light 1 body axis pos x,y,z (ft), bitmap radius (ft)
+1.1,2.2,3.3,4.4
+Light 1 heading (rad), pitch (rad), heading spin speed (rad/sec)
+5.5,6.6,7.7
+Light 1 cone: length (ft), base radius (ft), rim radius (ft), texture name
+1.1,2.2,3.3,testLightTexture.RAW
+Light 1 source: bitmap name
+testLightSourceBitmap.RAW
+Light 1 ms on, ms off (0 if light doesn't blink)
+4,5
