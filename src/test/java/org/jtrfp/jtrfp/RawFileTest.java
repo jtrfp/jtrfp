@@ -18,9 +18,6 @@ package org.jtrfp.jtrfp;
 
 import java.io.File;
 
-
-
-import org.jtrfp.jtrfp.FileLoadException;
 import org.jtrfp.jtrfp.raw.IRawData;
 import org.jtrfp.jtrfp.raw.RawFile;
 import org.junit.Assert;

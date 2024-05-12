@@ -21,10 +21,6 @@ import static org.junit.Assert.assertEquals;
 import java.io.File;
 import java.io.IOException;
 
-
-
-import org.jtrfp.jtrfp.FileLoadException;
-import org.jtrfp.jtrfp.FileStoreException;
 import org.jtrfp.jtrfp.lst.ILstData;
 import org.jtrfp.jtrfp.lst.LstData;
 import org.jtrfp.jtrfp.lst.LstFile;

@@ -19,10 +19,6 @@ package org.jtrfp.jtrfp;
 import java.io.File;
 import java.io.IOException;
 
-
-
-import org.jtrfp.jtrfp.FileLoadException;
-import org.jtrfp.jtrfp.FileStoreException;
 import org.jtrfp.jtrfp.act.ActColor;
 import org.jtrfp.jtrfp.act.ActFile;
 import org.junit.Assert;

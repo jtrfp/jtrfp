@@ -18,9 +18,6 @@ package org.jtrfp.jtrfp;
 
 import java.io.File;
 
-
-
-import org.jtrfp.jtrfp.FileLoadException;
 import org.jtrfp.jtrfp.pod.IPodFileEntry;
 import org.jtrfp.jtrfp.pod.PodFile;
 import org.jtrfp.jtrfp.sit.ISitPodFileEntry;

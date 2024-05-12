@@ -22,10 +22,6 @@ import static org.junit.Assert.assertTrue;
 import java.io.File;
 import java.io.IOException;
 
-
-
-import org.jtrfp.jtrfp.FileLoadException;
-import org.jtrfp.jtrfp.FileStoreException;
 import org.jtrfp.jtrfp.internal.pod.Pod1Loader;
 import org.jtrfp.jtrfp.pod.IPodData;
 import org.jtrfp.jtrfp.pod.IPodFileEntry;
