@@ -41,7 +41,7 @@ public abstract class AbstractISitDataTest extends TestCase {
     /**
      * Returns a new InputStream representing the dummy file to be parsed
      * by the test subject. Implementor should use this when implementing getSubject().
-     * @return A new InputStream representing the data of the test.RAW dummy file.
+     * @return A new InputStream representing the data of the MTM1Test.SIT dummy file.
      * @since May 7, 2024
      */
     protected InputStream getInputStream() {
