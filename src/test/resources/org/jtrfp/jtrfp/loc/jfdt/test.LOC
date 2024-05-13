@@ -1,0 +1,22 @@
+TRI Message System
+111
+LOC
+@@TAG
+Test Tag.
+@@STRING
+Test String.
+@@TAG
+Second test tag:
+@@COMMENT
+Second entry comment.
+@@STRING
+Second test string
+@@TAG
+Third test tag.
+
+With new lines.
+@@COMMENT
+Third entry comment
+@@STRING
+Third test string.
+@@END
