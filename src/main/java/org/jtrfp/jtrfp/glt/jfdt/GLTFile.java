@@ -24,7 +24,7 @@ import org.jtrfp.jfdt.ThirdPartyParseable;
 import org.jtrfp.jfdt.UnrecognizedFormatException;
 
 /**
- * Parses a poorly-understood Terminal Reality GLT file asset
+ * Read/Write parses a poorly-understood Terminal Reality GLT file asset
  * @author Chuck Ritola
  *
  */

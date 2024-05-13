@@ -26,8 +26,15 @@ import org.jtrfp.jtrfp.jfdt.TRParsers;
 import org.jtrfp.jtrfp.jfdt.TripletDouble;
 
 /**
- * Parses a CART Precision Racing .TRK file, which describes a /track/, not to be confused with
- * .TRK files in MTM and Evo, which describe /trucks/.
+ * Parses a CART Precision Racing .TRK file, which describes a <i>track</i>, not to be confused with
+ * .TRK files in MTM and Evo, which describe <i>trucks</i>. Non-CART .TRK files should be parsed
+ * using TRKFile<br><br>
+ * 
+ * <table>
+ * <tr><th>SUPPORT</th><th>UNIT TESTED</th><th>INTEGRATION TESTED</th><th>FIELD PROVEN</th></tr>
+ * <tr><td>CART</td><td>Yes</td><td>PODDoc</td><td>No</td></tr>
+ * </table>
+ * 
  * @author Chuck Ritola
  *
  */

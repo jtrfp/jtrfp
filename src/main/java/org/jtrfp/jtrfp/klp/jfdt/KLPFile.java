@@ -26,7 +26,14 @@ import org.jtrfp.jfdt.UnrecognizedFormatException;
 import org.jtrfp.jtrfp.jfdt.TRParsers;
 
 /**
- * Parses a Terminal Reality .KLP asset file from an InputStream.
+ * Read/Write parser for Terminal Reality .KLP asset file from InputStream.
+ * 
+ * <table>
+ * <tr><th>SUPPORT</th><th>UNIT TESTED</th><th>INTEGRATION TESTED</th><th>FIELD PROVEN</th></tr>
+ * <tr><td>MTM1</td><td>Yes</td><td>PODDoc</td><td>No</td></tr>
+ * <tr><td>MTM2</td><td>Yes</td><td>PODDoc</td><td>No</td></tr>
+ * </table>
+ * 
  * @author Chuck Ritola
  *
  */

@@ -24,6 +24,17 @@ import org.jtrfp.jfdt.SelfParsingFile;
 import org.jtrfp.jfdt.ThirdPartyParseable;
 import org.jtrfp.jfdt.UnrecognizedFormatException;
 
+/**
+ * Read/Write parses a Terminal Reality .CRS asset file from InputStream<br><br>
+ * 
+ * <table>
+ * <tr><th>SUPPORT</th><th>UNIT TESTED</th><th>INTEGRATION TESTED</th><th>FIELD PROVEN</th></tr>
+ * <tr><td>Hellbender</td><td>Yes</td><td>PODDoc</td><td>No</td></tr>
+ * </table>
+ * @author Chuck Ritola
+ *
+ */
+
 public class CRSFile extends SelfParsingFile {
     private int numBlocks;
     private ArrayList<AbstractCourseBlock> courseBlocks;

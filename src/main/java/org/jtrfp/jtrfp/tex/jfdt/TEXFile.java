@@ -26,6 +26,24 @@ import org.jtrfp.jfdt.ThirdPartyParseable;
 import org.jtrfp.jfdt.UnrecognizedFormatException;
 import org.jtrfp.jtrfp.jfdt.TRParsers;
 
+/**
+ * Read/Write parser for Terminal Reality .TEX file assets.
+ * Supports classic and version 1
+ * 
+ * <table>
+ * <tr><th>SUPPORT</th><th>UNIT TESTED</th><th>INTEGRATION TESTED</th><th>FIELD PROVEN</th></tr>
+ * <tr><td>MTM1</td><td>Yes</td><td>PODDoc</td><td>No</td></tr>
+ * <tr><td>MTM2</td><td>Yes</td><td>PODDoc</td><td>No</td></tr>
+ * <tr><td>Evo1</td><td>Yes</td><td>PODDoc</td><td>No</td></tr>
+ * <tr><td>Evo2</td><td>Yes</td><td>PODDoc</td><td>No</td></tr>
+ * <tr><td>CART</td><td>Yes</td><td>PODDoc</td><td>No</td></tr>
+ * </table>
+ * 
+ * 
+ * @author Chuck Ritola
+ *
+ */
+
 public class TEXFile extends SelfParsingFile {
     private Integer texVersion;
     private int textureCount, shadowTextureCount;

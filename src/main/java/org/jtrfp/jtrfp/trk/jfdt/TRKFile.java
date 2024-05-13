@@ -31,14 +31,16 @@ import org.jtrfp.jtrfp.jfdt.TripletDouble;
  * Read/Write parser for Terminal Reality TRK file assets.
  * This bean stores version 6 and 7 data in an internal TRKData delegate
  * which can be read using getTrkData() and casting the result to
- * Type6and7TruckFile.
+ * Type6and7TruckFile. CART TRK files are not supported by this parser.
+ * CART .TRK files should be parsed using CARTTRKFile<br><br>
  * 
- * SUPPORT    UNIT TESTED    INTEGRATION TESTED       FIELD PROVEN
- * MTM1       Yes            PODDoc                   No
- * MTM2       Yes            PODDoc                   No
- * Evo1(v6)   Yes            PODDoc                   No
- * Evo2(v7)   Yes            PODDoc                   No
- * CART       Not Supported - Please use CARTTRKFile
+ * <table>
+ * <tr><th>SUPPORT</th><th>UNIT TESTED</th><th>INTEGRATION TESTED</th><th>FIELD PROVEN</th></tr>
+ * <tr><td>MTM1</td><td>Yes</td><td>PODDoc</td><td>No</td></tr>
+ * <tr><td>MTM2</td><td>Yes</td><td>PODDoc</td><td>No</td></tr>
+ * <tr><td>Evo1</td><td>Yes</td><td>PODDoc</td><td>No</td></tr>
+ * <tr><td>Evo2</td><td>Yes</td><td>PODDoc</td><td>No</td></tr>
+ * </table>
  * 
  * @author Chuck Ritola
  *
