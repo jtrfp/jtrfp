@@ -14,7 +14,6 @@ package org.jtrfp.jtrfp.bin.jfdt;
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.jtrfp.jfdt.ClassInclusion;
@@ -25,14 +24,31 @@ import org.jtrfp.jfdt.ThirdPartyParseable;
 import org.jtrfp.jfdt.UnrecognizedFormatException;
 import org.jtrfp.jtrfp.bin.IBinData;
 
+/**
+ * Read/Write parser for Terminal Reality BIN model assets.<br>
+ * <table>
+ * <tr><th>SUPPORT</th><th>UNIT TESTED</th><th>INTEGRATION TESTED</th><th>FIELD PROVEN</th></tr>
+ * <tr><td>Terminal Velocity</td><td>Partial</td><td>PODDoc</td><td>Yes</td></tr>
+ * <tr><td>Fury3</td><td>No</td><td>PODDoc</td><td>Yes</td></tr>
+ * <tr><td>Hellbender</td><td>No</td><td>PODDoc</td><td>No</td></tr>
+ * <tr><td>MTM1</td><td>No</td><td>PODDoc</td><td>No</td></tr>
+ * <tr><td>MTM2</td><td>No</td><td>PODDoc</td><td>No</td></tr>
+ * <tr><td>Evo1</td><td>No</td><td>PODDoc</td><td>No</td></tr>
+ * <tr><td>Evo2</td><td>No</td><td>PODDoc</td><td>No</td></tr>
+ * <tr><td>CART</td><td>No</td><td>PODDoc</td><td>No</td></tr>
+ * </table>
+ * @author Chuck Ritola
+ *
+ */
+
 public abstract class BINFile implements ThirdPartyParseable {
 
     public static class Model extends SelfParsingFile {
 	int scale;
 	int unknown1, unknown2;
 	int numVertices;
-	ArrayList<Vertex> vertices;
-	ArrayList<ThirdPartyParseable> dataBlocks;
+	List<Vertex> vertices;
+	List<ThirdPartyParseable> dataBlocks;
 
 	public Model(InputStream is) throws IllegalAccessException, IOException {
 	    super(new BufferedInputStream(is,1024));
@@ -74,7 +90,7 @@ public abstract class BINFile implements ThirdPartyParseable {
 	    public static class VertexColorBlock implements ThirdPartyParseable {
 		private int  zero;
 		private long numVertices;
-		private final ArrayList<Long> paletteIndices = new ArrayList<Long>();
+		private List<Long> paletteIndices;
 		@Override
 		public void describeFormat(Parser parser)
 			throws UnrecognizedFormatException {
@@ -113,7 +129,7 @@ public abstract class BINFile implements ThirdPartyParseable {
 		/**
 		 * @return the paletteIndices
 		 */
-		public ArrayList<Long> getPaletteIndices() {
+		public List<Long> getPaletteIndices() {
 		    return paletteIndices;
 		}
 	    }// end FaceBlockXXX
@@ -360,7 +376,7 @@ public abstract class BINFile implements ThirdPartyParseable {
 
 		protected abstract byte getBlockID();
 
-		ArrayList<FaceBlockVertex> vertices;
+		List<FaceBlockVertex> vertices;
 
 		@Override
 		public void describeFormat(Parser prs)
@@ -540,7 +556,7 @@ public abstract class BINFile implements ThirdPartyParseable {
 		 * @param vertices
 		 *            the vertices to set
 		 */
-		public void setVertices(ArrayList<FaceBlockVertex> vertices) {
+		public void setVertices(List<FaceBlockVertex> vertices) {
 		    this.vertices = vertices;
 		}
 
@@ -576,7 +592,7 @@ public abstract class BINFile implements ThirdPartyParseable {
 	    
 	    public static class Unknown02 implements ThirdPartyParseable {
 		private int unknown0, numVertices;
-		private ArrayList<org.jtrfp.jtrfp.bin.jfdt.BINFile.Model.DataBlock.FaceBlock.FaceBlockVertexWithUV> vertices;
+		private List<org.jtrfp.jtrfp.bin.jfdt.BINFile.Model.DataBlock.FaceBlock.FaceBlockVertexWithUV> vertices;
 		private int [] unknownTail = new int[20];
 		
 		@Override
@@ -613,11 +629,11 @@ public abstract class BINFile implements ThirdPartyParseable {
 		    this.numVertices = numVertices;
 		}
 
-		public ArrayList<org.jtrfp.jtrfp.bin.jfdt.BINFile.Model.DataBlock.FaceBlock.FaceBlockVertexWithUV> getVertices() {
+		public List<org.jtrfp.jtrfp.bin.jfdt.BINFile.Model.DataBlock.FaceBlock.FaceBlockVertexWithUV> getVertices() {
 		    return vertices;
 		}
 
-		public void setVertices(ArrayList<org.jtrfp.jtrfp.bin.jfdt.BINFile.Model.DataBlock.FaceBlock.FaceBlockVertexWithUV> vertices) {
+		public void setVertices(List<org.jtrfp.jtrfp.bin.jfdt.BINFile.Model.DataBlock.FaceBlock.FaceBlockVertexWithUV> vertices) {
 		    this.vertices = vertices;
 		}
 
@@ -779,7 +795,7 @@ public abstract class BINFile implements ThirdPartyParseable {
 	    public static class BillboardTexCoords0x04 implements
 		    ThirdPartyParseable {
 		private int numVertices;
-		private List<UVCoordinate> vertices = new ArrayList<UVCoordinate>();
+		private List<UVCoordinate> vertices;
 
 		@Override
 		public void describeFormat(Parser prs) {
@@ -871,7 +887,7 @@ public abstract class BINFile implements ThirdPartyParseable {
 		    ThirdPartyParseable {
 		int unknown1, numTextures, unknown2, delay, unknown3, unknown4;
 		// String [] frameNames;
-		ArrayList<String> frameNames;
+		List<String> frameNames;
 
 		@Override
 		public void describeFormat(Parser prs)
@@ -999,7 +1015,7 @@ public abstract class BINFile implements ThirdPartyParseable {
 		 * @param frameNames
 		 *            the frameNames to set
 		 */
-		public void setFrameNames(ArrayList<String> frameNames) {
+		public void setFrameNames(List<String> frameNames) {
 		    this.frameNames = frameNames;
 		}
 
@@ -1052,7 +1068,7 @@ public abstract class BINFile implements ThirdPartyParseable {
 
 	    public static class VertexNormalsBlock implements ThirdPartyParseable {
 		private int unknown0, numNormals;
-		private ArrayList<Vertex> normals;
+		private List<Vertex> normals;
 
 		@Override
 		public void describeFormat(Parser prs)
@@ -1076,11 +1092,11 @@ public abstract class BINFile implements ThirdPartyParseable {
 		    this.numNormals = numNormals;
 		}
 
-		public ArrayList<Vertex> getNormals() {
+		public List<Vertex> getNormals() {
 		    return normals;
 		}
 
-		public void setNormals(ArrayList<Vertex> normals) {
+		public void setNormals(List<Vertex> normals) {
 		    this.normals = normals;
 		}
 
@@ -1225,7 +1241,7 @@ public abstract class BINFile implements ThirdPartyParseable {
 	/**
 	 * @return the vertices
 	 */
-	public ArrayList<Vertex> getVertices() {
+	public List<Vertex> getVertices() {
 	    return vertices;
 	}
 
@@ -1233,7 +1249,7 @@ public abstract class BINFile implements ThirdPartyParseable {
 	 * @param vertices
 	 *            the vertices to set
 	 */
-	public void setVertices(ArrayList<Vertex> vertices) {
+	public void setVertices(List<Vertex> vertices) {
 	    this.vertices = vertices;
 	}
 
@@ -1248,7 +1264,7 @@ public abstract class BINFile implements ThirdPartyParseable {
 	 * @param dataBlocks
 	 *            the dataBlocks to set
 	 */
-	public void setDataBlocks(ArrayList<ThirdPartyParseable> dataBlocks) {
+	public void setDataBlocks(List<ThirdPartyParseable> dataBlocks) {
 	    this.dataBlocks = dataBlocks;
 	}
     }// end Model
@@ -1256,7 +1272,7 @@ public abstract class BINFile implements ThirdPartyParseable {
     public static class AnimationControl extends SelfParsingFile {
 	int unknown1, numFrames, delay, unknown2, unknown3;
 	// String [] binFiles;
-	ArrayList<String> binFiles;
+	List<String> binFiles;
 
 	public AnimationControl(InputStream is) throws IllegalAccessException,
 		IOException {
@@ -1366,7 +1382,7 @@ public abstract class BINFile implements ThirdPartyParseable {
 	 * @param binFiles
 	 *            the binFiles to set
 	 */
-	public void setBinFiles(ArrayList<String> binFiles) {
+	public void setBinFiles(List<String> binFiles) {
 	    this.binFiles = binFiles;
 	}
 
