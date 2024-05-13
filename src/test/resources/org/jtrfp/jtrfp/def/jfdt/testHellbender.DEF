@@ -1,0 +1,54 @@
+2
+0,1,2,3,4,5,test.bin,simpleTest.bin
+6,7,8,9,10
+1,0,2,3
+8,1,2,3,4,5,6,7,8
+;NewHit
+16,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16
+!NewAtakRet
+1,2,0,4
+Test Description
+#New2ndweapon
+1,0,3,2000000
+%SFX
+testSFX1.wav
+testSFX2.wav
+: Path to follow
+5
+= cannonDamage, laserDamage, missileDamage
+4
+5
+6
+@ Friendly flag
+1
+{ Escape and destroy sound files
+escapeTest.wav
+destroyTest.wav
+0,1,2,3,4,5,test.bin,simpleTest.bin
+6,7,8,9,10
+1,0,2,3
+8,1,2,3,4,5,6,7,8
+;NewHit
+16,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16
+!NewAtakRet
+1,2,0,4
+Test Description
+#New2ndweapon
+1,0,3,2000000
+%SFX
+testSFX1.wav
+testSFX2.wav
+: Path to follow
+5
+= cannonDamage, laserDamage, missileDamage
+4
+5
+6
+@ Friendly flag
+1
+{ Escape and destroy sound files
+escapeTest.wav
+destroyTest.wav
+2
+0,5,-6,7,-8,9,-10,11
+1,-12,13,-14,15,-16,17,-18
