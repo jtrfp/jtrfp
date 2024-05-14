@@ -1,0 +1,69 @@
+-------- Ground Quake Count -------
+2
+------- Ground Quake Entry 1-------
+0
+1,2
+3,4,5,6,7
+8,9,10,11
+12,13,14,15,16
+17,18,19,20
+NULL
+NULL
+NULL
+NULL
+NULL
+!--Additional quake info--
+0
+------- Ground Quake Entry 2-------
+1
+-1,-2
+-3,-4,-5,-6,-7
+-8,-9,-10,-11
+-12,-14,-15,-16,-17
+-18,-19,-20,-21
+NULL
+NULL
+NULL
+NULL
+NULL
+!--Additional quake info--
+1
+-------- Box Quake Count --------
+2
+-------- Box Quake Entry 1 --------
+1
+2,3
+4,5,6
+7,8,9,10
+11,12,13,14,15
+16,17,18,19,20
+test0.wav
+test1.wav
+test2.wav
+test3.wav
+test4.wav
+!--Additional quake info--
+2
+@--Box quake switch info--
+1
+test1.RAW
+test0.RAW
+-------- Box Quake Entry 2 --------
+1
+0,0
+29,110,2
+-1,0,0,0
+0,0,0,0,0
+2,0,0,0,1
+NULL
+NULL
+test2.WAV
+NULL
+NULL
+!--Additional quake info--
+2
+@--Box quake switch info--
+1
+test1.RAW
+test0.RAW
+
