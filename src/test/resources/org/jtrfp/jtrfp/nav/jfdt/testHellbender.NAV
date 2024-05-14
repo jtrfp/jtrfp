@@ -1,0 +1,30 @@
+2
+6
+1111,2222,3333
+!priority,time
+4,5
+@Completion sound & completion text (39 chars max)
+completionSound.wav
+Completion text
+; Proximity Sound file
+proximitySoundFile.wav
+NAV Description
+11,22,33
+-------------------------------------------------
+0
+3861592,2949120,8698672
+!priority,time
+0,0
+@Completion sound & completion text (39 chars max)
+lprt-des.wav
+null: line ignored
+; Proximity Sound file
+missdetc.wav
+Destroy the landing port at these coordinates.
+5
+5
+10
+11
+35
+36
+-------------------------------------------------
