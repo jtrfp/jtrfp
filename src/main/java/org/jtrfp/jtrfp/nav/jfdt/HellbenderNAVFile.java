@@ -48,11 +48,12 @@ public class HellbenderNAVFile extends SelfParsingFile implements NAVData {
     public void describeFormat(Parser prs) throws UnrecognizedFormatException {
 	prs.stringEndingWith(TRParsers.LINE_DELIMITERS,
 		prs.property("numNavigationPoints", int.class), false);
-	for (int i = 0; i < getNumNavigationPoints(); i++)
+	for (int i = 0; i < getNumNavigationPoints(); i++) {
 	    prs.subParseProposedClasses(
 		    prs.indexedProperty("nativeNavObjects", NAVSubObject.class, i),
 		    ClassInclusion.nestedClassesOf(HellbenderNAVFile.class));
 	    prs.expectString("-------------------------------------------------\r\n", FailureBehavior.UNRECOGNIZED_FORMAT);
+	}//end for(numNavigationPoints)
     }// end describeFormat()
 
     public static abstract class NAVSubObject implements ThirdPartyParseable, NAVSubObjectData {
