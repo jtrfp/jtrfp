@@ -1,0 +1,12 @@
+== Tournament Name ==
+tournamentName
+== Tournament Description File ==
+tournamentDescription.file
+== Has Drag Race Flag ==
+1
+== Number Of Tracks ==
+2
+== Track Entry #1 ==
+sitFile0.SIT,1
+== Track Entry #2 ==
+sitFile1.SIT,2
