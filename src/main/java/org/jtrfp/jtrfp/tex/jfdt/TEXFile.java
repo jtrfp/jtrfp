@@ -31,6 +31,7 @@ import org.jtrfp.jtrfp.jfdt.TRParsers;
  * Supports classic and version 1
  * 
  * <table>
+ * <caption>Compatibility testing</caption>
  * <tr><th>SUPPORT</th><th>UNIT TESTED</th><th>INTEGRATION TESTED</th><th>FIELD PROVEN</th></tr>
  * <tr><td>MTM1</td><td>Yes</td><td>PODDoc</td><td>No</td></tr>
  * <tr><td>MTM2</td><td>Yes</td><td>PODDoc</td><td>No</td></tr>

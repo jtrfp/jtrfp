@@ -35,6 +35,7 @@ import org.jtrfp.jtrfp.lvl.ILvlData;
  * Read/Write parser for Terminal Reality LVL file.
  * ILvlData support is experimental.<br><br>
  * <table>
+ * <caption>Compatibility testing</caption>
  * <tr><th>SUPPORT</th><th>UNIT TESTED</th><th>INTEGRATION TESTED</th><th>FIELD PROVEN</th></tr>
  * <tr><td>Terminal Velocity</td><td>Yes</td><td>PODDoc</td><td>Yes</td></tr>
  * <tr><td>Fury3</td><td>Yes</td><td>PODDoc</td><td>Yes</td></tr>

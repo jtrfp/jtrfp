@@ -27,6 +27,7 @@ import org.jtrfp.jtrfp.jfdt.TRParsers;
 /**
  * Read/Write parser for Terminal Reality QKE "quake" file.<br><br>
  * <table>
+ * <caption>Compatibility testing</caption>
  * <tr><th>SUPPORT</th><th>UNIT TESTED</th><th>INTEGRATION TESTED</th><th>FIELD PROVEN</th></tr>
  * <tr><td>Hellbender</td><td>Yes</td><td>PODDoc</td><td>No</td></tr>
  * </table>

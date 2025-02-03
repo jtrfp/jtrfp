@@ -23,6 +23,7 @@ import org.jtrfp.jfdt.ThirdPartyParseable;
  * Top-level read/write parser for Terminal Reality .NAV file assets. Parses to an internal delegate
  * either as a TVF3NAVFile or HellbenderNAVFile.<br><br>
  * <table>
+ * <caption>Compatibility testing</caption>
  * <tr><th>SUPPORT</th><th>UNIT TESTED</th><th>INTEGRATION TESTED</th><th>FIELD PROVEN</th></tr>
  * <tr><td>Terminal Velocity</td><td>Yes</td><td>PODDoc</td><td>Yes</td></tr>
  * <tr><td>Fury3</td><td>Yes</td><td>PODDoc</td><td>Yes</td></tr>

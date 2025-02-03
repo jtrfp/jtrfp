@@ -27,6 +27,7 @@ import org.jtrfp.jtrfp.bin.IBinData;
 /**
  * Read/Write parser for Terminal Reality BIN model assets.<br>
  * <table>
+ * <caption>Compatibility testing</caption>
  * <tr><th>SUPPORT</th><th>UNIT TESTED</th><th>INTEGRATION TESTED</th><th>FIELD PROVEN</th></tr>
  * <tr><td>Terminal Velocity</td><td>Partial</td><td>PODDoc</td><td>Yes</td></tr>
  * <tr><td>Fury3</td><td>No</td><td>PODDoc</td><td>Yes</td></tr>

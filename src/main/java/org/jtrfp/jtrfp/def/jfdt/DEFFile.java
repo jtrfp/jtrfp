@@ -36,6 +36,7 @@ import org.jtrfp.jtrfp.jfdt.Weapon;
  * Read/Write parses a Terminal Reality DEF asset file from an InputStream.<br><br>
  * 
  * <table>
+ * <caption>Compatibility testing</caption>
  * <tr><th>SUPPORT</th><th>UNIT TESTED</th><th>INTEGRATION TESTED</th><th>FIELD PROVEN</th></tr>
  * <tr><td>TV</td><td>Yes</td><td>PODDoc</td><td>No</td></tr>
  * <tr><td>Fury3</td><td>Yes</td><td>PODDoc</td><td>No</td></tr>

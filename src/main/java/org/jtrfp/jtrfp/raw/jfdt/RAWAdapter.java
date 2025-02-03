@@ -16,7 +16,7 @@ import org.jtrfp.jtrfp.raw.IRawData;
 
 /**
  * Wraps a jFDT RAWAdapter to implement the mtmX IRawData interface.
- * Also provides row-major -> column-major coordinate conversion for getValueAt(...)
+ * Also provides row-major -&gt; column-major coordinate conversion for getValueAt(...)
  * @author Chuck Ritola
  *
  */

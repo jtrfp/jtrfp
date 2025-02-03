@@ -28,6 +28,7 @@ import org.jtrfp.jfdt.UnrecognizedFormatException;
  * Read/Write parses a Terminal Reality .CRS asset file from InputStream<br><br>
  * 
  * <table>
+ * <caption>Compatibility testing</caption>
  * <tr><th>SUPPORT</th><th>UNIT TESTED</th><th>INTEGRATION TESTED</th><th>FIELD PROVEN</th></tr>
  * <tr><td>Hellbender</td><td>Yes</td><td>PODDoc</td><td>No</td></tr>
  * </table>
