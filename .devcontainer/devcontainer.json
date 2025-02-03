@@ -1,0 +1,18 @@
+{
+    "name": "Java Dev Container",
+    "image": "mcr.microsoft.com/devcontainers/java",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "vscjava.vscode-java-pack",
+                "github.vscode-github-actions"
+              ]
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/java:1": {
+            "version": "none",
+            "installMaven": "true"
+        }
+    }
+  }
