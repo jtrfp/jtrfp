@@ -71,19 +71,6 @@
 		</dependency>
 	</dependencies>
 
-    <distributionManagement>
-        <repository>
-            <id>ossrh</id>
-            <name>Release Repository</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <name>Snapshots Repository</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -207,7 +194,7 @@
 						<version>0.8.0</version>
 						<extensions>true</extensions>
 						<configuration>
-							<publishingServerId>ossrh</publishingServerId>
+							<publishingServerId>central</publishingServerId>
 							<autoPublish>true</autoPublish>
 							<waitUntil>published</waitUntil>
 						</configuration>
