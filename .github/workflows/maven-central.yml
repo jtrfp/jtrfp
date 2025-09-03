@@ -1,4 +1,4 @@
-name: Publish package to the Maven Central Repository and GitHub Packages
+name: Publish package to the Maven Central
 on:
   release:
     types: [created]
@@ -21,7 +21,7 @@ jobs:
       - name: Set version
         run: mvn versions:set -DnewVersion=${{ github.event.release.name }}
       - name: Publish to the Maven Central Repository
-        run: mvn --batch-mode deploy
+        run: mvn --batch-mode clean deploy
         env:
           MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
