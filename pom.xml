@@ -172,7 +172,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-javadoc-plugin</artifactId>
-						<version>3.11.2</version>
+						<version>3.11.3</version>
 						<executions>
 						<execution>
 							<id>attach-javadocs</id>
@@ -185,7 +185,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>
-						<version>3.2.7</version>
+						<version>3.2.8</version>
 						<configuration>
 							<signer>bc</signer>
 						</configuration>
@@ -205,6 +205,7 @@
 						<version>0.8.0</version>
 						<extensions>true</extensions>
 						<configuration>
+							<tokenAuth>true</tokenAuth>
 							<publishingServerId>central</publishingServerId>
 							<autoPublish>true</autoPublish>
 							<waitUntil>published</waitUntil>
